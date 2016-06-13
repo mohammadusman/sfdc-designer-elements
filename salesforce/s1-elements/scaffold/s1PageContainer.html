@@ -1,0 +1,25 @@
+<polymer-element name="s1-page-container" attributes="navigateon, navigationtarget">
+    <template>
+        <style>
+            :host {
+                position: absolute;
+                left:0; top:0px; bottom: 0; right:0;
+                background-color: rgb(240, 241, 242);
+                overflow-x: hidden;
+                overflow-y: scroll;
+                -webkit-overflow-scrolling: touch;
+            };
+        </style>
+        <content select="*"></content>
+    </template>
+    <script>
+        Polymer('s1-page-container', {
+            navigateonChanged: function() {
+                var that = this;
+                this.addEventListener(this.navigateon, function() {
+                    that.fire('navigate', {target: that.navigationtarget});
+                });
+            }
+        })
+    </script>
+</polymer-element>

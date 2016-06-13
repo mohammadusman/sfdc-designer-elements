@@ -1,0 +1,77 @@
+<polymer-element name="s1-mdplauncher-default" attributes="mdplauncherlabeltl,mdplaunchericontl" noscript>
+
+  <template>
+
+<div>
+  <div class="bg-4 brtopm mdp-launcher ht-450">
+    <ul class="tc fixed-table man pan ht-third">
+      <li class="active--list-2 a-mid dtc border-bottom border-right border--6">
+        <img src="assets/icons/standard_bg/post_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">{{mdplauncherlabeltl || 'Share Post'}}</span>
+      </li>
+      <li class="active--list-2 a-mid dtc border-bottom border--6">
+        <img src="assets/icons/standard_bg/photo_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">Share Photo</span>
+      </li>
+    </ul>
+    <ul class="tc fixed-table man pan ht-third">
+      <li class="active--list-2 a-mid dtc border-bottom border-right border--6">
+        <img src="assets/icons/standard_bg/file_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">Share File</span>
+      </li>
+      <li class="active--list-2 a-mid dtc border-bottom border--6">
+        <img src="assets/icons/standard_bg/opportunity_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">New Opportunity</span>
+      </li>
+    </ul>
+    <ul class="tc fixed-table man pan ht-third">
+      <li class="active--list-2 a-mid dtc border-bottom border-right border--6">
+        <img src="assets/icons/standard_bg/contact_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">New Contact</span>
+      </li>
+      <li class="active--list-2 a-mid dtc border-bottom border--6">
+        <img src="assets/icons/standard_bg/lead_120.png" alt="post" class="sq-60 dib">
+        <br>
+        <span class="dib mtm f5 wht fw-normal">New Lead</span>
+      </li>
+    </ul>
+  </div>
+  <div class="carousel-dots fixed-table">
+    <ul class="pos-rel dtc a-mid man pvn ht-75 list-horizontal tc bg-5 pln">
+      <li class="sq-14 lh-14 ">
+        <a href="javascript:void(0)" class="sq-7 bg-10 brc " title="Page 1">
+          <span class="tha">Page 1</span>
+        </a>
+      </li>
+      <li class="sq-14 lh-14 ">
+        <a href="javascript:void(0)" class="sq-7 bg-11 brc " title="Page 2">
+          <span class="tha">Page 2</span>
+        </a>
+      </li>
+      <li class="sq-14 lh-14 ">
+        <a href="javascript:void(0)" class="sq-7 bg-11 brc " title="Page 3">
+          <span class="tha">Page 3</span>
+        </a>
+      </li>
+      <li class="pos-abs" style="right: 0px; top:0">
+        <span class="wht f1 carousel-close icon-utility-close" style="display:table-cell; height:75px; vertical-align:middle; padding: 10px 30px" on-tap="{{closeMDP}}"></span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+  </template>
+  <script type="text/javascript">
+    Polymer("s1-mdplauncher-default", {
+      closeMDP: function() {
+        this.fire('close');
+      }
+    })
+  </script>
+
+</polymer-element>

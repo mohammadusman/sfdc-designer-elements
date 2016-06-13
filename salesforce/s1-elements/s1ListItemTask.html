@@ -1,0 +1,30 @@
+<polymer-element name="s1-list-item-task" attributes="listitemtasktitle,listitemtaskdetail1,listitemtaskdetail2,listitemtaskdetail3" noscript>
+
+  <template>
+
+    <li class="flag flag--top pam">
+        <div class="prm flag--image">
+            <input
+                class="checkbox checkbox--default checkbox--states-1 brm bg-secondary-btn sq-22 a-mid dib"
+                type="checkbox"
+                id="filter-1">
+        </div>
+        <div class="flag--body">
+            <label for="filter-1">
+                <h1 class="dib man f3 text-color-1">
+                    {{listitemtasktitle || 'Final Decision'}}
+                </h1>
+                <ul class="clear list-plain man pan">
+                    <li class="f5 text-truncate text-color-2">{{listitemtaskdetail1 || 'United Partners'}}</li>
+                    <li class="f5 text-truncate text-color-2">{{listitemtaskdetail2 || 'Allison Nishida'}}</li>
+                </ul>
+            </label>
+        </div>
+        <div class="prn plm flag--image">
+            <time datetime="2009-02-21" class="f6 text-color-2">{{listitemtaskdetail3 || 'Feb 21'}}</time>
+        </div>
+    </li>
+
+  </template>
+
+</polymer-element>

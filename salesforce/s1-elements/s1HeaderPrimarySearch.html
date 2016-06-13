@@ -1,0 +1,22 @@
+<polymer-element name="s1-header-primary-search" attributes="headerprimarysearchplaceholder" noscript>
+
+  <template>
+
+<header class="bg-global-header ht-44 " role="group">
+  <a href="javascript:void(0)" title="Back" class="db mtm fl mlm">
+    <span class="icon-utility-back active--icon-1 text-color-5"></span>
+  </a>
+  <div class="pos-rel size-fill prs plm pvs">
+    <label>
+      <span class="dn">Search</span>
+    </label>
+    <input type="text"
+           name="default"
+           placeholder="{{headerprimarysearchplaceholder || 'Search Salesforce'}}"
+           class="size-full phs ht-30 input input--header-primary input--ph-2 input--focus-2">
+  </div>
+</header>
+
+  </template>
+
+</polymer-element>

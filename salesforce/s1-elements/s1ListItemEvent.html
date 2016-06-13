@@ -1,0 +1,25 @@
+<polymer-element name="s1-list-item-event" attributes="listitemeventtime,listitemeventduration,listitemeventtitle,listitemeventdetail1,listitemeventdetail2,listitemeventdetail3" noscript>
+
+  <template>
+
+    <li class="flag flag--top pam">
+        <time datetime="10:00" class="f1 text-color-2 dib mrs">{{listitemeventtime || '11am'}}</time>
+        <span class="f6 text-color-2 mbs dib">{{listitemeventduration || '2 hours'}}</span>
+        <h1 class="man f3 text-color-1 fw-semibold">
+            <a href="javascript:void(0)">
+                {{listitemeventtitle || 'United Partners Kick Off'}}
+            </a>
+        </h1>
+        <p class="mtn mbm f4 text-color-2 text-truncate">
+            {{listitemeventdetail1 || '1 Market Street'}}
+        </p>
+        <hr class="hr hr--2">
+  <ul class="list-plain man pan">
+    <li class="text-truncate f5 text-color-2">{{listitemeventdetail2 || 'Jon Amos from United Partners'}}</li>
+    <li class="text-truncate f5 text-color-2">{{listitemeventdetail3 || 'Your colleague John S. and 2 others'}}</li>
+  </ul>
+</li>
+
+  </template>
+
+</polymer-element>

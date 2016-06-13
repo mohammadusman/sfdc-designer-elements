@@ -1,0 +1,25 @@
+<polymer-element name="s1-card-event" attributes="eventcardtime,eventcardduration,eventcardtitle,eventcarddetail1,eventcarddetail2,eventcarddetail3" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 pam brm">
+        <time datetime="10:00" class="f1 text-color-2 dib mrs">{{eventcardtime || '10am'}}</time>
+        <span class="f6 text-color-2 mbs dib">{{eventcardduration || '1 hour'}}</span>
+        <h1 class="man f3 text-color-1 fw-semibold">
+            <a href="javascript:void(0)">
+                {{eventcardtitle || 'Green Dot Media Product Demo'}}
+            </a>
+        </h1>
+        <p class="mtn mbm f4 text-color-2 text-truncate">
+            {{eventcarddetail1 || '1565 Saint Peters Street, San Francisco CA'}}
+        </p>
+        <hr class="hr hr--2">
+  <ul class="list-plain man pan">
+    <li class="text-truncate f5 text-color-2">{{eventcarddetail2 || 'Jason Brenamen from Durable Materials'}}</li>
+    <li class="text-truncate f5 text-color-2">{{eventcarddetail3 || 'Your colleague Sally J. and 3 others'}}</li>
+  </ul>
+</article>
+
+  </template>
+
+</polymer-element>

@@ -1,0 +1,25 @@
+<polymer-element name="s1-card-contact" attributes="contactcardicon,contactcardtitle,contactcarddetail1,contactcarddetail2,contactcarddetail3" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 pam brm">
+  <div class="mbs flag flag--rev">
+    <div class="flag--body">
+      <h1 class="man f3 text-color-1 fw-semibold">
+        {{contactcardtitle || 'Jonathan Perilla-Jones'}}
+      </h1>
+    </div>
+    <div class="flag--image prm">
+                <div class="icon icon--{{contactcardicon || 'contact'}} brs bgs-100 a-mid sq-30"></div>
+    </div>
+  </div>
+  <ul class="list-plain man pan">
+    <li class="f5 text-color-2">{{contactcarddetail1 || 'Director of Consumer Sales'}}</li>
+    <li class="f5 text-color-2">{{contactcarddetail2 || 'United Partners'}}</li>
+    <li class="f5 text-color-2">{{contactcarddetail3 || '(415) 432-5456'}}</li>
+  </ul>
+</article>
+
+  </template>
+
+</polymer-element>

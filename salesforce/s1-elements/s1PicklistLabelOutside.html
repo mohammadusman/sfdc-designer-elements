@@ -1,0 +1,19 @@
+<polymer-element name="s1-picklist-label-outside" attributes="picklistlabeloutsidevalue,picklistoutsidelabellabel" noscript>
+
+  <template>
+
+<div class="mbm pos-rel">
+  <label class="dib mbs f5 text-color-2 size-full">{{picklistoutsidelabellabel || 'Label'}}</label>
+  <span class="label--icon-r-out icon-utility-right size-full"></span>
+  <a
+    href="javascript:void(0)"
+    name="picklist"
+    title="Picklist Value"
+    class="size-full plm prx pvm bg-secondary-btn input input--picklist">
+    <span class="text-color-1 dib">{{picklistlabeloutsidevalue || 'Picklist Value'}}</span>
+  </a>
+</div>
+
+  </template>
+
+</polymer-element>

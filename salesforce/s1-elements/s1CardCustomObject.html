@@ -1,0 +1,23 @@
+<polymer-element name="s1-card-custom-object" attributes="customcardtitle,customcardlabel1,customcardlabel2,customcardlabel3,customcardlabel4,customcarddetail1,customcarddetail2,customcarddetail3,customcarddetail4" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 pam brm">
+        <h1 class="mtn mbs f3 text-color-1 fw-semibold">
+            {{customcardtitle || 'W-1534215'}}
+        </h1>
+  <dl class="clear list-plain man pan">
+            <dt class="fl wid-third text-truncate f5 text-color-2">{{customcardlabel1 || 'Record Type'}}</dt>
+    <dd class="man plm wid-twothird fl text-truncate f5 text-color-1">{{customcarddetail1 || 'Bug'}}</dd>
+            <dt class="cl wid-third fl text-truncate f5 text-color-2">{{customcardlabel2 || 'Subject'}}</dt>
+    <dd class="man plm wid-twothird fl text-truncate f5 text-color-1">{{customCardDetail2}}</dd>
+            <dt class="cl wid-third fl text-truncate f5 text-color-2">{{customcardlabel3 || 'Status'}}</dt>
+    <dd class="man plm wid-twothird fl text-truncate f5 text-color-1">{{customcarddetail3 || 'New'}}</dd>
+            <dt class="cl wid-third fl text-truncate f5 text-color-2">{{customcardlabel4 || 'Priority'}}</dt>
+    <dd class="man plm wid-twothird fl text-truncate f5 text-color-1">{{customcarddetail4 || 'P1'}}</dd>
+  </dl>
+</article>
+
+  </template>
+
+</polymer-element>

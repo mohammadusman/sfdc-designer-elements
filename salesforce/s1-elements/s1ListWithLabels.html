@@ -1,0 +1,53 @@
+<link rel="import" href="../../components/core-selector/core-selector.html">
+<link rel="import" href="s1ListItemWithLabel.html">
+<polymer-element name="s1-list-with-labels" attributes="collection">
+
+  <template>
+    <core-selector id="selector"></core-selector>
+    <ul id="recordlist" class="list-plain fw-normal bg-2 man pan">
+      <template repeat="{{records}}">
+        <s1-list-item-with-label
+          name="{{listItemId}}"
+          listItemLabelTitle="{{listItemLabelTitle}}"
+          listItemLabelMeta="{{listItemLabelMeta}}" style="display:block;">
+        </s1-list-item-with-label>
+      </template>
+    </ul>
+    <shadow></shadow>
+  </template>
+  <script>
+    Polymer("s1-list-with-labels", {
+      get selected() {
+        return this.$.selector.selected;
+      },
+      ready: function() {
+        this.$.selector.target = this.$.recordlist;
+        this.records = [
+          {listItemLabelTitle: "List Item 1", listItemLabelMeta: "Label 1"},
+          {listItemLabelTitle: "List Item 2", listItemLabelMeta: "Label 2"},
+          {listItemLabelTitle: "List Item 3", listItemLabelMeta: "Label 3"},
+          {listItemLabelTitle: "List Item 4", listItemLabelMeta: "Label 4"},
+        ];
+      },
+      collectionChanged: function() {
+        var that = this;
+        var updateRecords = function() {
+          that.records = [];
+          that.collection.models.forEach(function(model) {
+            that.records.push({
+              listItemId: model.id,
+              listItemLabelTitle: model.attributes.Name || model.attributes.CaseNumber,
+              listItemLabelMeta: model.attributes.Title || model.attributes.Subject || model.attributes.BillingCity || " ",
+            });
+          });
+        };
+
+        if (this.collection) {
+          updateRecords();
+          this.collection.on('sync', updateRecords);
+        }
+      }
+    })
+  </script>
+
+</polymer-element>

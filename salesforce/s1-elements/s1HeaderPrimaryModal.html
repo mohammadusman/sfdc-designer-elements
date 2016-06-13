@@ -1,0 +1,19 @@
+<polymer-element name="s1-header-primary-modal" attributes="headerprimarymodalbuttonleft,headerprimarymodalbuttonright,headerprimarymodaltitle" noscript>
+
+  <template>
+
+<header class="bg-global-header ht-44 tc" role="group">
+  <a href="javascript:void(0)" title="{{Close}}"
+     class="btn--header-primary brm bg-global-header-btn fl mts mls phm ht-30 ">
+    <span class="text-color-5 lh-30 f6">{{headerprimarymodalbuttonleft || 'Close'}}</span>
+  </a>
+  <a href="javascript:void(0)" title="Submit"
+     class="btn--header-primary brm bg-global-header-btn ht-30 phm pos-rel fr mts mrs">
+    <span class="text-color-5 lh-30 f6">{{headerprimarymodalbuttonright || 'Submit'}}</span>
+  </a>
+  <span class="text-color-5 dib lh-44 fw-semibold f3">{{headerprimarymodaltitle || 'New Contact'}}</span>
+</header>
+
+  </template>
+
+</polymer-element>

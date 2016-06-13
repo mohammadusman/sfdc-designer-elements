@@ -1,0 +1,25 @@
+<link rel="import" href="../s1MDPButton.html">
+<link rel="import" href="../s1MDPLauncherDefault.html">
+<polymer-element name="s1-mdp-bundle">
+    <template>
+        <s1-mdpbutton id="s1_mdp_button" on-tap="{{toggleMDP}}"></s1-mdpbutton>
+        <s1-mdplauncher-default id="s1_mdp_launcher" label-tl="Share Post" icon-tl="assets/icons/standard_bg/post_120.png" class="animate" on-close="{{toggleMDP}}"></s1-mdplauncher-default>
+    </template>
+    <script>
+        Polymer('s1-mdp-bundle', {
+            mdpOpen: false,
+            ready: function() {
+                var that = this;
+                this.$.s1_mdp_launcher.style.visibility = 'hidden';
+                this.$.s1_mdp_launcher.addEventListener('transitionend', function() {
+                    if (!that.mdpOpen) that.$.s1_mdp_launcher.style.visibility = 'hidden';
+                })
+            },
+            toggleMDP: function() {
+                this.$.s1_mdp_launcher.style.visibility = '';
+                this.$.s1_mdp_launcher.style.webkitTransform = this.$.s1_mdp_launcher.style.transform = this.mdpOpen ? "translate3d(0, 522px, 0)" : "translate3d(0, 0, 0)";
+                this.mdpOpen = !this.mdpOpen;
+            }
+        })
+    </script>
+</polymer-element>

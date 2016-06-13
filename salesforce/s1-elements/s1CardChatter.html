@@ -1,0 +1,21 @@
+<polymer-element name="s1-card-chatter" attributes="chattercardtitle,chattercardicon,chattercarddetail1" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 pam brm">
+  <div class="flag">
+    <div class="flag--image prm">
+                <div class="icon icon--{{chattercardicon || 'avatar'}} brs bgs-100 a-mid sq-30"></div>
+    </div>
+    <div class="flag--body">
+      <h1 class="man f3 text-color-1 fw-semibold">
+        {{chattercardtitle || 'John Miller'}}
+      </h1>
+                <p class="man f5 text-color-2">{{chattercarddetail1 || 'Chief Architect'}}</li>
+    </div>
+  </div>
+</article>
+
+  </template>
+
+</polymer-element>

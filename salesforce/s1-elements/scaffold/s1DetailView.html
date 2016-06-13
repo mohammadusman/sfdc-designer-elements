@@ -1,0 +1,135 @@
+<link rel="import" href="../../mobile-ui-elements/elements/force-ui-detail/force-ui-detail.html">
+<link rel="import" href="../s1ListItemDefault.html">
+<polymer-element name="s1-sobject-detail" extends="force-ui-detail">
+    <script>
+        (function() {
+            var createTemplateFromMarkup = function (markup, bindingDelegate) {
+                // Templatize the markup
+                var helperTemplate = document.createElement('template');
+                helperTemplate.setAttribute('bind', '')
+                helperTemplate.innerHTML = markup;
+
+                HTMLTemplateElement.decorate(helperTemplate);
+                if (bindingDelegate) helperTemplate.bindingDelegate = bindingDelegate;
+
+                return helperTemplate;
+            }
+            var modArray = function(obj) {
+                if (!(obj instanceof Array))
+                    if (obj) return [obj];
+                    else return [];
+                else return obj;
+            }
+
+            // Utility method to return input element type for a corresponding salesforce field type.
+            var inputType = function(fieldType) {
+                switch(fieldType) {
+                     case "int": return "number";
+                     case "double": return "number";
+                     case "percent": return "number";
+                     case "phone": return "tel";
+                     case "date": return "date";
+                     case "datetime": return "datetime";
+                     case "time": return "time";
+                     case "url": return "url";
+                     case "email": return "email";
+                     case "base64": return "file";
+                     default: return "text";
+                }
+            }
+
+            Polymer('s1-sobject-detail', {
+                sobject: "",
+                recordid: "",
+
+                compileTemplate: function(layoutSections) {
+
+                    // Generates and returns a Handlebar template for a specific field.
+                    // If forEdit is true and if field is editable, method returns an input type element.
+                    var generateFieldTemplate = function(fieldName, fieldInfo, displayField, forEdit) {
+                        var fieldType = fieldInfo.type, html = '';
+
+                        if (forEdit) {
+                            if (fieldType == 'boolean')
+                                html += ('<s1-checkbox-disabled checkboxChecked?="{{' + displayField + '}}"></s1-checkbox-disabled>');
+                            else if (fieldType == 'picklist') {
+                                html += '<select value="{{' + displayField + '}}">';
+                                fieldInfo.picklistValues.forEach(function(option){
+                                    html += ('<option value="' + option.value + '">' + option.label + '</option>');
+                                })
+                                html += '</select>';
+                            } else if (fieldType == 'textarea')
+                                html += ('<input type="textarea" value="{{' + displayField + '}}"/>');
+                            else
+                                html += ('<input value="{{' + displayField + '}}" type="' + inputType(fieldType) + '" maxlength="' + fieldInfo.length + '"/>');
+                        }
+                        else {
+                            if (fieldType == 'boolean')
+                                html += ('<s1-checkbox-disabled checkboxChecked?="{{' + displayField + '}}"></s1-checkbox-disabled>');
+                                //html += ('<input type="checkbox" checked="{{' + displayField + '}}" disabled="true"/>');
+                            else if (fieldInfo.htmlFormatted) //TBD: See if we need to do anything for HTML type fields in polymer.
+                                html += '<force-html-output value="{{' + displayField + '}}"></force-html-output>';
+                            else html += ('{{' + displayField + '}}');
+                        }
+                        return html;
+                    }
+
+                    // Generates and returns the handlebar template for the layout sections.
+                    var html = '';
+                    var layoutFieldsInfoMap = {};
+
+                    layoutSections.forEach(function(section, sectionIndex) {
+                        html += '<div class="sf-layout-section">';
+                        html += '<s1-list-item-container>';
+                        html += ('<li class="list-plain active--list-1 pam text-color-1 f4 border-bottom border--3 lineHeader">' + section.heading + '</li>');
+                        // Iterate over layout rows in each section
+                        modArray(section.layoutRows).forEach(function(row) {
+                            //html += '<div class="sf-layout-row ui-responsive">';
+                            // Iterate over layout items in each row
+                            modArray(row.layoutItems).forEach(function(item) {
+                                //html += '<div class="sf-layout-item' + ((+section.columns > 1) ? ' ui-block' : '') + '">';
+                                html += ('<s1-list-item-default>');
+                                if (!item.placeholder) {
+                                    html += ('<span class="db text-color-2 f6">' + item.label + '</span>');
+                                    //html += ('<div class="sf-layout-item-label">' + item.label + '</div>');
+                                    var errorHtml = '';
+                                    var valueHtml = '<span class="db text-color-1 f4">';
+                                    // Iterate over layout item component in each item
+                                    modArray(item.layoutComponents).forEach(function(comp) {
+                                        var isFieldEditable = false;
+                                        if (comp.type == 'Separator') valueHtml += comp.value;
+                                        else if (comp.type == 'Field' && !/__XyzEncoded__s$/.test(comp.value)) { // Add a special case to ingnore weird geo location field which adds internal field to layout (*__XyzEncoded__s)
+                                            var displayField = comp.value; // Default display field as the field of component
+                                            var fieldInfo = comp.details; // Fetch the field info to check if it's a relationship
+                                            layoutFieldsInfoMap[comp.value] = fieldInfo; // Track the field required for this layout
+                                            if (fieldInfo.type == 'reference') {
+                                                displayField = fieldInfo.relationshipName;
+                                                displayField += (fieldInfo.referenceTo == 'Case' ? '.CaseNumber' : '.Name');
+                                                layoutFieldsInfoMap[displayField] = fieldInfo;
+                                            }
+                                            // check if field is editable based on the field type information and the layout settings. Also ignore refrence type fields as we don't currently support the edit for that.
+                                            isFieldEditable = (item.editable && fieldInfo.type != 'reference' && fieldInfo.updateable);
+                                            valueHtml += generateFieldTemplate(comp.value, fieldInfo, displayField, isFieldEditable);
+                                            if (isFieldEditable) errorHtml += '<div class="sf-layout-item-error">{{__errors__.' + comp.value + '}}</div>';
+                                        }
+                                    });
+                                    html += (errorHtml + valueHtml + '</span></s1-list-item-default>');
+                                }
+                            });
+                        });
+                        html += '</s1-list-item-container>';
+                        html += '</div>';
+                    });
+
+                    // Templatize the markup
+                    return {
+                        template: createTemplateFromMarkup(html),
+                        fields: _.keys(layoutFieldsInfoMap),
+                        fieldInfos: layoutFieldsInfoMap
+                    };
+                }
+            });
+
+        })();
+    </script>
+</polymer-element>

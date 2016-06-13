@@ -1,0 +1,22 @@
+<polymer-element name="s1-anchor-light-labelon-bottom" attributes="anchorlightbottomlabel,anchorlightbottomtitle,anchorlightbottomicon,anchorlightbuttonbottomlabel" noscript>
+
+  <template>
+
+<header class="bg-1 border-bottom border--3">
+  <div class="icon icon--{{anchorlightbottomicon || 'account'}} brs bgs-100 a-mid mhm sq-30"></div>
+  <h1 class="dib thin a-mid">
+    <span class="db f3 text-color-1">
+      {{anchorlightbottomtitle || 'Accounts'}}
+    </span>
+    <span class="db f6 lower">
+      {{anchorlightbottomlabel || '14 results'}}
+    </span>
+  </h1>
+  <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
+      {{anchorlightbuttonbottomlabel || 'New'}}
+  </button>
+</header>
+
+  </template>
+
+</polymer-element>

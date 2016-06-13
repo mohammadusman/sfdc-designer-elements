@@ -1,0 +1,18 @@
+<polymer-element name="s1-card-list" attributes="cardlistlabel" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 brm">
+  <header class="clear pam border-bottom border--8">
+    <h1 class="fl man fw-normal f5 text-color-1">{{cardlistlabel || 'Upcoming'}}</h1>
+    <a href="javascript:void(0)" title="More" class="fr">
+      <span class="fl f5">More</span>
+      <span class="lh-16 fl mls f6 text-color-2 icon-utility-right"></span>
+    </a>
+  </header>
+  <ul class="man pan list-plain" ng-transclude></ul>
+</article>
+
+  </template>
+
+</polymer-element>

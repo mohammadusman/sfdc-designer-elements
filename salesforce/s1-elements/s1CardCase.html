@@ -1,0 +1,17 @@
+<polymer-element name="s1-card-case" attributes="casecardtitle,casecarddetail1,casecarddetail2,casecarddetail3" noscript>
+
+  <template>
+
+<article class="mam bg-1 border border--3 pam brm">
+        <h1 class="mtn mbs f3 text-color-1 fw-semibold">
+            {{casecardtitle || 'SSO login issue on mobile'}}
+        </h1>
+  <ul class="clear list-plain man pan">
+    <li class="fl f5 text-color-2">{{casecarddetail1 || 'Medium'}} &#8226; {{casecarddetail2 || 'New'}}</li>
+    <li class="fr f5 text-color-2">#{{casecarddetail3 || '00001015'}}</li>
+  </ul>
+</article>
+
+  </template>
+
+</polymer-element>

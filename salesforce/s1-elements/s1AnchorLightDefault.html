@@ -1,0 +1,22 @@
+<polymer-element name="s1-anchor-light-default" attributes="anchorlightlabel,anchorlighttitle,anchorlighticon,anchorlightbuttonlabel" noscript>
+
+  <template>
+
+<header class="bg-1 border-bottom border--3">
+  <div class="icon icon--{{anchorlighticon}} brs bgs-100 a-mid mhm sq-30"></div>
+  <h1 class="dib thin a-mid">
+    <span class="db f6 lower">
+      {{anchorlightlabel || 'recent'}}
+    </span>
+    <span class="db f3 text-color-1">
+      {{anchorlighttitle || 'Opportunities'}}
+    </span>
+  </h1>
+  <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
+      {{anchorlightbuttonlabel || 'New'}}
+  </button>
+</header>
+
+  </template>
+
+</polymer-element>

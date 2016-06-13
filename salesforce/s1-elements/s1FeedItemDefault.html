@@ -1,0 +1,35 @@
+<polymer-element name="s1-feed-item-default" attributes="feeditemtimestamp,feeditemlikes,feeditemcomments,feeditembody,feeditemactor,feeditemactorimage" noscript>
+
+  <template>
+
+<article class="mam bg-1 brm ds-1">
+  <div class="flag pam">
+    <div class="flag--image prm">
+      <img src="%7b%7bfeeditemactorimage%20__%20%27https_/s3.amazonaws.com/uifaces/faces/twitter/gt/128.html" width="45" height="45" alt="gt" class="brm">
+    </div>
+    <div class="flag--body">
+      <a href="javascript:void(0)" name="actor" title="{{feeditemactor || 'Geoff Teehan'}}" class="fw-semibold f3 db">
+        {{feeditemactor}}
+      </a>
+      <time class="db f6 text-color-2" datetime="2013-11-13">
+        {{feeditemtimestamp || '28 minutes ago'}}
+      </time>
+    </div>
+  </div>
+  <p class="phm mtn fw-normal f4 text-color-1">
+    {{feeditembody || 'Feedback from everyone else is welcome also! Please let me know what you think. I am desperate for your approval and appreciation. Shower me with love and affection. Fishing for compliments here.'}}
+  </p>
+  <div ng-transclude></div>
+  <footer class="clear pvm phm border-top border--5">
+    <a href="javascript:void(0)" name="like" title="Liked" class="f5 fl">
+      <span class="dib mrs icon-utility-like f4"></span>
+      Liked
+    </a>
+    <span class="f5 fr mlm">{{feeditemcomments || '4 comments'}}</span>
+    <span class="f5 fr">{{feeditemlikes || '2 likes'}}</span>
+  </footer>
+</article>
+
+  </template>
+
+</polymer-element>

@@ -1,0 +1,13 @@
+<polymer-element name="s1-lookup-with-label" attributes="lookupwithlabellabel,lookupwithlabelplaceholder,lookupwithlabelvalue" noscript>
+
+  <template>
+
+<label class="mbm db pos-rel">
+  <span class="db mbs f5 text-color-2">{{lookupwithlabellabel || 'Label'}}</span>
+  <span class="size-full icon-utility-search pos-abs label--lookup"></span>
+  <input type="text" name="default" value="{{lookupwithlabelvalue || ''}}" placeholder="{{lookupwithlabelplaceholder || 'Lookup'}}" class="size-full plm prx pvm input input--default input--ph-1 input--focus-1">
+</label>
+
+  </template>
+
+</polymer-element>

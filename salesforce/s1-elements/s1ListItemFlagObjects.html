@@ -1,0 +1,18 @@
+<polymer-element name="s1-list-item-flag-objects" attributes="listitemflagimg,listitemflagtitle,listitemflagmeta1,listitemflagmeta2" noscript>
+
+  <template>
+
+    <li class="flag flag--top active--list-1 pam border-bottom border--3">
+        <div class="flag--image prm">
+            <img src="%7b%7blistitemflagimg%20__%20%27assets/icons/doctype/excel_120.html" class="ht-30" alt="excel">
+        </div>
+        <div class="flag--body">
+            <span class="db text-color-1 f4">{{listitemflagtitle || 'List Item'}}</span>
+            <span class="db text-color-2 f6">{{listitemflagmeta1 || 'Metadata 1'}}</span>
+            <span class="db text-color-2 f6">{{listitemflagmeta2 || 'Metadata 2'}}</span>
+        </div>
+    </li>
+
+  </template>
+
+</polymer-element>

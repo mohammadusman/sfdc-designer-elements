@@ -1,0 +1,38 @@
+<polymer-element name="s1-anchor-dark" attributes="anchordarktitle,anchordarkdescription,anchordarkicon" noscript>
+
+  <template>
+
+<header class="bg-anchor tc ptm">
+  <div class="icon icon--d icon--{{anchordarkicon || 'contact'}} sq-60"></div>
+  <h1 class="f1 wht text-shadow man">
+    {{anchordarktitle || 'James Bakersfield'}}
+  </h1>
+  <h2 class="f3 text-color-3 text-shadow man pbm">
+    {{anchordarkdescription || 'CEO | Trinidad Corp. | (635) 519-3762'}}
+  </h2>
+  <ul class="list-horizontal grid bg-5 wht font-size-icon lh-44 phm"
+      role="menubar">
+    <li class="size-1of3 grid-cell tc">
+      <a href="javascript: void(0)" title="Email" role="menuitem">
+        <span class="icon-utility-email wht active-dim"></span>
+        <span class="tha">email</span>
+      </a>
+    </li>
+    <li class="size-1of3 grid-cell tc">
+      <a href="javascript: void(0)" title="Call" role="menuitem">
+        <span class="icon-utility-call wht active-dim"></span>
+        <span class="tha">call</span>
+      </a>
+    </li>
+    <li class="size-1of3 grid-cell tc">
+      <a href="javascript: void(0)" title="Map" role="menuitem">
+        <span class="icon-utility-location wht active-dim"></span>
+        <span class="tha">map</span>
+      </a>
+    </li>
+  </ul>
+</header>
+
+  </template>
+
+</polymer-element>

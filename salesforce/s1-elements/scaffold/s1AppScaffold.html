@@ -1,0 +1,107 @@
+<link rel="import" href="../s1HeaderPrimaryDefault.html">
+<link rel="import" href="../../../components/core-animated-pages/core-animated-pages.html">
+<link rel="import" href="../../../components/core-animated-pages/transitions/slide-from-right.html">
+<script src="../../mobile-ui-elements/dependencies/jquery/dist/jquery.js"></script>
+<polymer-element name="s1-app-scaffold" attributes="navcloseevent, startpage">
+    <template>
+
+        <style>
+            .animate, :scope /deep/ .animate, :host /deep/ .animate {
+                transition: transform 300ms;
+                -webkit-transition-property: -webkit-transform;
+                -webkit-transition-duration: 300ms;
+            }
+
+            :scope /deep/ s1-mdpbutton,
+            :host /deep/ s1-mdpbutton {
+                position: absolute; bottom:0; right: 0; margin: 20px;
+            }
+
+            :scope /deep/ s1-mdplauncher-default,
+            :host /deep/ s1-mdplauncher-default {
+                position: absolute; left:0; right:0; bottom:0;
+                -webkit-transform: translate3d(0px, 522px, 0px);
+                transform: translate3d(0px, 522px, 0px);
+            }
+        </style>
+
+        <!-- Stage left section -->
+        <div id="navigation_menu" style="position: absolute; left:0; bottom: 0; top:0; width: 270px; overflow-y: scroll;" class="scrollable">
+          <content id="nav" select="[navigation]"></content>
+        </div>
+
+        <!-- Notifications section -->
+        <div id="notification_panel" style="position: absolute; right:0; bottom: 0; top:0; width: 270px; overflow-y: scroll;" class="scrollable">
+          <content select="[notifications]"></content>
+        </div>
+
+        <!-- Main section with record list and detail -->
+        <section id="main" class="animate" style="position: absolute; left:0; top:0; bottom: 0; right:0; background-color: rgb(240, 241, 242);" on-navigate="{{navigatePage}}">
+            <s1-header-primary-default id="s1_header_bar"
+                notifications="4" icon="rows"
+                on-navigation="{{toggleStageNavigation}}"
+                on-notifications="{{toggleNotifications}}">
+            </s1-header-primary-default>
+            <core-animated-pages id="animated_pages" style="position: absolute; left:0; top:44px; bottom: 0; right:0; overflow: hidden" transitions="slide-from-right">
+                <content id="pages" select="s1-page-container"></content>
+            </core-animated-pages>
+            <content select="*"></content>
+        </section>
+    </template>
+    <script>
+        Polymer('s1-app-scaffold', {
+            ready: function() {
+                this.async(this.arrangePages);
+            },
+            get pages() {
+                return this.$.pages.getDistributedNodes();
+            },
+            observe: {
+                startpage: 'arrangePages'
+            },
+            arrangePages: function() {
+                var $pages = $(this.pages);
+                $pages.addClass('animate');
+
+                this.activepage = $pages.filter(this.startpage || ':first')[0];
+                this.$.animated_pages.selectedItem = this.activepage;
+                this.pageStack = [];
+            },
+            navigateBack: function(ev) {
+                this.activepage = this.$.animated_pages.selectedItem = this.pageStack.pop();
+                if (!this.pageStack.length) this.$.s1_header_bar.headerprimarylefticon = "rows";
+            },
+            navigatePage: function(ev, detail) {
+                var target = detail.target;
+                if (typeof target == 'string') target = $(this.pages).filter(target)[0];
+                if (target) {
+                    this.$.animated_pages.selectedItem = target;
+                    this.pageStack.push(this.activepage);
+                    this.activepage = detail.target;
+                    this.$.s1_header_bar.headerprimarylefticon = "back";
+                }
+            },
+            navcloseeventChanged: function() {
+                var that = this;
+                this.$.navigation_menu.addEventListener(this.navcloseevent, function() {
+                    that.toggleStageNavigation();
+                });
+            },
+            toggleStageNavigation: function(ev) {
+                if (this.pageStack.length) this.navigateBack(ev);
+                else {
+                    this.$.notification_panel.style.display = 'none';
+                    this.$.navigation_menu.style.display = 'inline';
+                    this.$.main.style.webkitTransform = this.$.main.style.transform = this.stageLeftOpen ? "translate3d(0, 0, 0)" : "translate3d(270px, 0, 0)";
+                    this.stageLeftOpen = !this.stageLeftOpen;
+                }
+            },
+            toggleNotifications: function() {
+                this.$.notification_panel.style.display = 'inline';
+                this.$.navigation_menu.style.display = 'none';
+                this.$.main.style.webkitTransform = this.$.main.style.transform = this.notificationPanelOpen ? "translate3d(0, 0, 0)" : "translate3d(-270px, 0, 0)";
+                this.notificationPanelOpen = !this.notificationPanelOpen;
+            },
+        })
+    </script>
+</polymer-element>
