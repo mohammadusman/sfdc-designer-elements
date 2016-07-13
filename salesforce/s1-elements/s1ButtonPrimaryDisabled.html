@@ -1,11 +1,21 @@
-<polymer-element name="s1-button-primary-disabled" attributes="" noscript>
+<dom-module id="s1-button-primary-disabled">
+    <template>
+        <button disabled class="btn bg-primary-btn btn--primary pvs size-full brm border border--1">
+            <span class="wht f3 fw-semibold">{{buttonprimarylabel}}</span>
+        </button>
+    </template>
+    <script>
 
-  <template>
 
-<button disabled class="btn bg-primary-btn btn--primary pvs size-full brm border border--1">
-  <span class="wht f3 fw-semibold">Primary Button</span>
-</button>
+        Polymer({
+            is: "s1-button-primary-disabled",
+            properties: {
+                buttonprimarylabel: {
+                    type: string,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

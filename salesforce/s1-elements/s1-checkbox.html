@@ -1,0 +1,30 @@
+<dom-module id="s1-checkbox">
+    <template>
+        <div class="mbm db">
+            <input class="checkbox checkbox--default checkbox--states-1 brm mrs bg-secondary-btn sq-22 a-mid dib"
+                   type="checkbox"
+                   id="filter-1" checked="{{checkboxchecked}}">
+            <label class="f4 text-color-1" for="filter-1">
+                {{checkboxlabel}}
+            </label>
+        </div>
+    </template>
+    <script>
+
+
+        Polymer({
+            is: "s1-checkbox",
+            properties: {
+                checkboxlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                checkboxchecked: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
+
+    </script>
+</dom-module>

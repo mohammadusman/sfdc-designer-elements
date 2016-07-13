@@ -1,13 +1,23 @@
-<polymer-element name="s1-textarea-error" attributes="textareaerrorplaceholder" noscript>
+<dom-module id="s1-textarea-error" >
+    <template>
+        <label>
+            <span class="tha">Error</span>
+            <textarea name="default" placeholder="{{textareaerrorplaceholder}}" class="size-full phm pvm textarea textarea--error textarea--ph-1 textarea--focus-1"></textarea>
+        </label>
+        <p class="text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+    </template>
+    <script>
 
-  <template>
 
-<label>
-  <span class="tha">Error</span>
-  <textarea name="default" placeholder="{{textareaerrorplaceholder || 'Default textarea'}}" class="size-full phm pvm textarea textarea--error textarea--ph-1 textarea--focus-1"></textarea>
-</label>
-<p class="text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+        Polymer({
+            is: "s1-textarea-error",
+            properties: {
+                textareaerrorplaceholder: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

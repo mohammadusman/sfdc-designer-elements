@@ -1,31 +1,35 @@
-<polymer-element name="s1-modal-dialog-withcheckbox" attributes="" noscript>
+<dom-module id="s1-modal-dialog-withcheckbox" >
+    <template>
+        <a href="javascript:void(0)" name="close" title="close" class="db tr size-full pbm">
+            <span class="db icon-utility-close f2 wht"></span>
+        </a>
+        <div class="bg-1 brm pam pos-rel tc clear">
+            <span class="icon-utility-warning text-warning icon1 dib mbm"></span>
+            <p class="mtn text-color-1 f4">
+                <strong>Strong text!</strong>
+                Detail text and lots of unicorns and rainbows.
+            </p>
+            <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 mbm">
+                <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
+            </button>
+            <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2">
+                <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
+            </button>
+            <div class="mtm fl">
+                <input type="checkbox" id="filter-1"
+                       class="checkbox checkbox--default checkbox--states-1 brm mrs bg-secondary-btn sq-22 a-mid dib" />
+                <label class="f5 text-color-1" for="filter-1">
+                    Check this if you never want to see this modal again
+                </label>
+            </div>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<a href="javascript:void(0)" name="close" title="close" class="db tr size-full pbm">
-  <span class="db icon-utility-close f2 wht"></span>
-</a>
-<div class="bg-1 brm pam pos-rel tc clear">
-  <span class="icon-utility-warning text-warning icon1 dib mbm"></span>
-  <p class="mtn text-color-1 f4">
-    <strong>Strong text!</strong>
-    Detail text and lots of unicorns and rainbows.
-  </p>
-  <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 mbm">
-    <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
-  </button>
-  <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2">
-    <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
-  </button>
-  <div class="mtm fl">
-    <input type="checkbox" id="filter-1"
-           class="checkbox checkbox--default checkbox--states-1 brm mrs bg-secondary-btn sq-22 a-mid dib" />
-    <label class="f5 text-color-1" for="filter-1">
-      Check this if you never want to see this modal again
-    </label>
-  </div>
-</div>
+        Polymer({
+            is: "s1-modal-dialog-withcheckbox"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

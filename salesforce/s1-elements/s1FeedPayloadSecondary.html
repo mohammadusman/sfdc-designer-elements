@@ -1,19 +1,23 @@
-<polymer-element name="s1-feed-payload-secondary" attributes="" noscript>
+<dom-module id="s1-feed-payload-secondary" >
+    <template>
+        <article class="brm border border--4 bg-1 pam">
+            <div class="flag">
+                <div class="flag--image prm">
+                    <img src="assets/icons/standard_bg/thanks_120.png" class="sq-30" alt="thanks">
+                </div>
+                <div class="flag--body">
+                    <span class="f4 text-color-1 db">#thanks</span>
+                    <span class="db f5 text-color-2">Thanks for all you do to make us great!</span>
+                </div>
+            </div>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="brm border border--4 bg-1 pam">
-  <div class="flag">
-    <div class="flag--image prm">
-      <img src="assets/icons/standard_bg/thanks_120.png" class="sq-30" alt="thanks">
-    </div>
-    <div class="flag--body">
-      <span class="f4 text-color-1 db">#thanks</span>
-      <span class="db f5 text-color-2">Thanks for all you do to make us great!</span>
-    </div>
-  </div>
-</article>
+        Polymer({
+            is: "s1-feed-payload-secondary"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

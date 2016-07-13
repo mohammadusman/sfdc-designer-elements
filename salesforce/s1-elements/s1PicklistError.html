@@ -1,19 +1,32 @@
-<polymer-element name="s1-picklist-error" attributes="picklisterrorvalue,picklisterrorlabel" noscript>
+<dom-module id="s1-picklist-error" >
+    <template>
+        <div class="pos-rel">
+            <span class="label--icon-r icon-utility-right size-full"></span>
+            <a href="javascript:void(0)"
+               name="picklist"
+               title="Picklist Value"
+               class="size-full plm prx pvm bg-secondary-btn input input--picklist-error">
+                <label class="dib mrs f5 text-color-2">{{picklisterrorlabel}}</label><span class="text-color-1 dib">{{picklisterrorvalue}}</span>
+            </a>
+        </div>
+        <p class="mbm text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+    </template>
+    <script>
 
-  <template>
 
-<div class="pos-rel">
-  <span class="label--icon-r icon-utility-right size-full"></span>
-  <a
-    href="javascript:void(0)"
-    name="picklist"
-    title="Picklist Value"
-    class="size-full plm prx pvm bg-secondary-btn input input--picklist-error">
-    <label class="dib mrs f5 text-color-2">{{picklisterrorlabel || 'Label'}}</label><span class="text-color-1 dib">{{picklisterrorvalue || 'Picklist Value'}}</span>
-  </a>
-</div>
-<p class="mbm text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+        Polymer({
+            is: "s1-picklist-error",
+            properties: {
+                picklisterrorlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                picklisterrorvalue: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

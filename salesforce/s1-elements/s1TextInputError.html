@@ -1,13 +1,17 @@
-<polymer-element name="s1-text-input-error" attributes="" noscript>
+<dom-module id="s1-text-input-error">
+    <template>
+        <label>
+            <span class="dn">Default</span>
+            <input type="text" name="default" placeholder="Error Input" class="size-full phm pvm input input--error input--ph-1 input--focus-1" value="Error Input">
+        </label>
+        <p class="mbm text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+    </template>
+    <script>
 
-  <template>
 
-<label>
-  <span class="dn">Default</span>
-  <input type="text" name="default" placeholder="Error Input" class="size-full phm pvm input input--error input--ph-1 input--focus-1" value="Error Input">
-</label>
-<p class="mbm text-color-2 f6"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+        Polymer({
+            is: "s1-text-input-error"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,11 +1,15 @@
-<polymer-element name="s1-file-preview" attributes="" noscript>
+<dom-module id="s1-file-preview">
+    <template>
+        <div class="file-preview dropstroke-1 brm">
+            <img src="http://placekitten.com/350/232" width="350" height="220" alt="kitten" class="size-full z-below">
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<div class="file-preview dropstroke-1 brm">
-  <img src="http://placekitten.com/350/232" width="350" height="220" alt="kitten" class="size-full z-below">
-</div>
+        Polymer({
+            is: "s1-file-preview"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

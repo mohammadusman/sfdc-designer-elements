@@ -1,22 +1,25 @@
-<polymer-element name="s1-lookup-error" attributes="" noscript>
+<dom-module id="s1-lookup-error" >
+    <template>
+        <div class="mbm pos-rel">
+            <label class="size-full icon-utility-search pos-abs label--lookup">
+                <span class="dn">Lookup</span>
+            </label>
+            <input type="text"
+                   name="default"
+                   placeholder="Lookup"
+                   class="size-full plm prx pvm input input--error input--ph-1 input--focus-1">
+        </div>
+        <p class="text-color-2 f6">
+            <span class="text-error fw-semibold f6">Error:</span>
+            This field is required.
+        </p>
+    </template>
+    <script>
 
-  <template>
 
-<div class="mbm pos-rel">
-  <label class="size-full icon-utility-search pos-abs label--lookup">
-    <span class="dn">Lookup</span>
-  </label>
-  <input
-    type="text"
-    name="default"
-    placeholder="Lookup"
-    class="size-full plm prx pvm input input--error input--ph-1 input--focus-1">
-</div>
-<p class="text-color-2 f6">
-  <span class="text-error fw-semibold f6">Error:</span>
-  This field is required.
-</p>
+        Polymer({
+            is: "s1-lookup-error"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

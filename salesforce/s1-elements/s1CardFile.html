@@ -1,26 +1,52 @@
-<polymer-element name="s1-card-file" attributes="filecardtitle,filecardicon,filecarddetail1,filecarddetail2,filecarddetail3,filecarddetail4" noscript>
+<dom-module id="s1-card-file" >
+    <template>
+        <article class="mam bg-1 border border--3 pam brm">
+            <div class="flag flag--top">
+                <div class="flag--image prm">
+                    <img class="ht-30" src="assets/icons/doctype/%7b%7bfilecardicon%20__%20%27pdf%27%7d%7d_120.html">
+                </div>
+                <div class="flag--body">
+                    <h1 class="man f3 text-color-1 fw-semibold">
+                        {{filecardtitle}}
+                    </h1>
+                    <ul class="list-plain man pan">
+                        <li class="f5 text-color-2">{{filecarddetail1}}</li>
+                        <li class="dib f5 text-color-2">{{filecarddetail2}} &#8226; </li>
+                        <li class="dib f5 text-color-2">{{filecarddetail3}} &#8226; </li>
+                        <li class="dib f5 text-color-2">{{filecarddetail4}}</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="mam bg-1 border border--3 pam brm">
-  <div class="flag flag--top">
-    <div class="flag--image prm">
-                <img class="ht-30" src="assets/icons/doctype/%7b%7bfilecardicon%20__%20%27pdf%27%7d%7d_120.html">
-    </div>
-    <div class="flag--body">
-      <h1 class="man f3 text-color-1 fw-semibold">
-        {{filecardtitle || 'Q4 First Call Template'}}
-      </h1>
-                <ul class="list-plain man pan">
-                    <li class="f5 text-color-2">{{filecarddetail1 || 'Yuri Sebata-Dempster'}}</li>
-                    <li class="dib f5 text-color-2">{{filecarddetail2 || 'Sep 23, 2011'}} &#8226; </li>
-                    <li class="dib f5 text-color-2">{{filecarddetail3 || '23MB'}} &#8226; </li>
-                    <li class="dib f5 text-color-2">{{filecarddetail4 || 'pdf'}}</li>
-                </ul>
-    </div>
-  </div>
-</article>
+        Polymer({
+            is: "s1-card-file",
+            properties: {
+                filecardtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                filecarddetail1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                filecarddetail2: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                filecarddetail3: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                filecarddetail4: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

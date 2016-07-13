@@ -1,25 +1,27 @@
-<polymer-element name="s1-textarea-with-buttonsand-error" attributes="" noscript>
+<dom-module id="s1-textarea-with-buttonsand-error">
+    <template>
+        <article>
+            <label>
+                <span class="tha">Error</span>
+                <textarea name="default"
+                          placeholder="Textarea with buttons"
+                          class="brtopm size-full phm pvm textarea textarea--error textarea--ph-1 textarea--focus-1"></textarea>
+            </label>
+            <button class="btn bg-secondary-btn btn--secondary pvm size-1of2 brbotm-l border-bottom border-sides border-top-none border--2 fl">
+                <span class="icon-utility-adduser text-color-4 f1"></span>
+            </button>
+            <button class="btn bg-secondary-btn btn--secondary pvm size-1of2 brbotm-r border-bottom border-right border-top-none border-left-none border--2">
+                <span class="text-color-4 f1 icon-utility-attach"></span>
+            </button>
+            <p class="text-color-2 f6 clear"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article>
-  <label>
-    <span class="tha">Error</span>
-    <textarea
-      name="default"
-      placeholder="Textarea with buttons"
-      class="brtopm size-full phm pvm textarea textarea--error textarea--ph-1 textarea--focus-1">
-    </textarea>
-  </label>
-  <button class="btn bg-secondary-btn btn--secondary pvm size-1of2 brbotm-l border-bottom border-sides border-top-none border--2 fl">
-    <span class="icon-utility-adduser text-color-4 f1"></span>
-  </button>
-  <button class="btn bg-secondary-btn btn--secondary pvm size-1of2 brbotm-r border-bottom border-right border-top-none border-left-none border--2">
-    <span class="text-color-4 f1 icon-utility-attach"></span>
-  </button>
-  <p class="text-color-2 f6 clear"><span class="text-error fw-semibold f6">Error:</span> This field is required.</p>
-</article>
+        Polymer({
+            is: "s1-textarea-with-buttonsand-error"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

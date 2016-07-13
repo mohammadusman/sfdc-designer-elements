@@ -1,6 +1,6 @@
 <link rel="import" href="../s1MDPButton.html">
 <link rel="import" href="../s1MDPLauncherDefault.html">
-<polymer-element name="s1-mdp-bundle">
+<dom-module name="s1-mdp-bundle">
     <template>
         <s1-mdpbutton id="s1_mdp_button" on-tap="{{toggleMDP}}"></s1-mdpbutton>
         <s1-mdplauncher-default id="s1_mdp_launcher" label-tl="Share Post" icon-tl="assets/icons/standard_bg/post_120.png" class="animate" on-close="{{toggleMDP}}"></s1-mdplauncher-default>
@@ -22,4 +22,4 @@
             }
         })
     </script>
-</polymer-element>
+</dom-module>

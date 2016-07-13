@@ -1,21 +1,39 @@
-<polymer-element name="s1-card-chatter" attributes="chattercardtitle,chattercardicon,chattercarddetail1" noscript>
+<dom-module id="s1-card-chatter">
+    <template>
+        <article class="mam bg-1 border border--3 pam brm">
+            <div class="flag">
+                <div class="flag--image prm">
+                    <div class="icon icon--{{chattercardicon}} brs bgs-100 a-mid sq-30"></div>
+                </div>
+                <div class="flag--body">
+                    <h1 class="man f3 text-color-1 fw-semibold">
+                        {{chattercardtitle}}
+                    </h1>
+                    <p class="man f5 text-color-2">{{chattercarddetail1}}</li>
+                </div>
+            </div>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="mam bg-1 border border--3 pam brm">
-  <div class="flag">
-    <div class="flag--image prm">
-                <div class="icon icon--{{chattercardicon || 'avatar'}} brs bgs-100 a-mid sq-30"></div>
-    </div>
-    <div class="flag--body">
-      <h1 class="man f3 text-color-1 fw-semibold">
-        {{chattercardtitle || 'John Miller'}}
-      </h1>
-                <p class="man f5 text-color-2">{{chattercarddetail1 || 'Chief Architect'}}</li>
-    </div>
-  </div>
-</article>
+        Polymer({
+            is: "s1-card-chatter",
+            properties: {
+                chattercardicon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                chattercardtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                chattercarddetail1: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,17 +1,35 @@
-<polymer-element name="s1-card-account" attributes="accountcardtitle,accountcarddetail1,accountcarddetail2" noscript>
+<dom-module id="s1-card-account" >
+    <template>
+        <article class="mam bg-1 border border--3 pam brm">
+            <h1 class="man f3 text-color-1 fw-semibold">
+                {{accountcardtitle}}
+            </h1>
+            <ul class="list-plain man pan">
+                <li class="f5 text-color-2">{{accountcarddetail1}}</li>
+                <li class="f5 text-color-2">{{accountcarddetail2}}</li>
+            </ul>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="mam bg-1 border border--3 pam brm">
-        <h1 class="man f3 text-color-1 fw-semibold">
-            {{accountcardtitle || 'United Partners, Inc.'}}
-        </h1>
-  <ul class="list-plain man pan">
-    <li class="f5 text-color-2">{{accountcarddetail1 || 'San Francisco, CA'}}</li>
-    <li class="f5 text-color-2">{{accountcarddetail2 || 'Enterprise Customer'}}</li>
-  </ul>
-</article>
+        Polymer({
+            is: "s1-card-account",
+            properties: {
+                accountcardtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                accountcarddetail1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                accountcarddetail2: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

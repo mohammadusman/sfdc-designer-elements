@@ -1,11 +1,21 @@
-<polymer-element name="s1-list-item-default" attributes="listitemdefaulttitle" noscript>
+<dom-module id="s1-list-item-default" >
+    <template>
+        <li class="list-plain active--list-1 pam text-color-1 f4 border-bottom border--3">
+            <content select="*"></content>
+        </li>
+    </template>
+    <script>
 
-  <template>
 
-  <li class="list-plain active--list-1 pam text-color-1 f4 border-bottom border--3">
-      <content select="*"></content>
-  </li>
+        Polymer({
+            is: "s1-list-item-default",
+            properties: {
+                listitemdefaulttitle: {
+                    string: listitemdefaulttitle,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

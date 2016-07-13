@@ -1,22 +1,26 @@
-<polymer-element name="s1-modal-sort-filter-onesection" attributes="" noscript>
+<dom-module id="s1-modal-sort-filter-onesection" >
+    <template>
+        <a href="javascript:void(0)" title="close" name="close" class="db tr size-full pbm">
+            <span class="db icon-utility-close f2 wht"></span>
+        </a>
+        <div class="bg-1 brm pos-rel clear" role="group">
+            <ul class="text-color-1 phm f4 man">
+                <li class="db pvm border-bottom border--8">
+                    Value 1
+                    <span class="icon-utility-check fr text-blue"></span>
+                </li>
+                <li class="db pvm">
+                    Value 2
+                </li>
+            </ul>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<a href="javascript:void(0)" title="close" name="close" class="db tr size-full pbm">
-  <span class="db icon-utility-close f2 wht"></span>
-</a>
-<div class="bg-1 brm pos-rel clear" role="group">
-  <ul class="text-color-1 phm f4 man">
-    <li class="db pvm border-bottom border--8">
-      Value 1
-      <span class="icon-utility-check fr text-blue"></span>
-    </li>
-    <li class="db pvm">
-      Value 2
-    </li>
-  </ul>
-</div>
+        Polymer({
+            is: "s1-modal-sort-filter-onesection"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,50 +1,105 @@
-<polymer-element name="s1-list-flag-objects" attributes="s1listflagobjectsfirsttitle,s1listflagobjectsfirstmetaone,s1listflagobjectsfirstmetatwo,s1listflagobjectssecondtitle,s1listflagobjectssecondmetaone,s1listflagobjectssecondmetatwo,s1listflagobjectsthirdtitle,s1listflagobjectsthirdmetaone,s1listflagobjectsthirdmetatwo,s1listflagobjectsforthtitle,s1listflagobjectsforthmetaone,s1listflagobjectsforthmetatwo" noscript>
+<dom-module id="s1-list-flag-objects">
+    <template>
+        <ul class="fw-normal bg-2 man pan">
+            <li class="flag flag--top active--list-1 pam border-bottom border--3">
+                <div class="flag--image prm">
+                    <img src="assets/icons/doctype/excel_120.png" class="ht-30" alt="excel">
+                </div>
+                <div class="flag--body">
+                    <span class="db text-color-1 f4">{{s1listflagobjectsfirsttitle}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsfirstmetaone}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsfirstmetatwo}}</span>
+                </div>
+            </li>
+            <li class="flag flag--top active--list-1 pam border-bottom border--3">
+                <div class="flag--image prm">
+                    <img src="assets/icons/doctype/html_120.png" class="ht-30" alt="html">
+                </div>
+                <div class="flag--body">
+                    <span class="db text-color-1 f4">{{s1listflagobjectssecondtitle}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectssecondmetaone}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectssecondmetatwo}}</span>
+                </div>
+            </li>
+            <li class="flag flag--top active--list-1 pam border-bottom border--3">
+                <div class="flag--image prm">
+                    <img src="assets/icons/doctype/psd_120.png" class="ht-30" alt="psd">
+                </div>
+                <div class="flag--body">
+                    <span class="db text-color-1 f4">{{s1listflagobjectsthirdtitle}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsthirdmetaone}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsthirdmetatwo}}</span>
+                </div>
+            </li>
+            <li class="flag flag--top active--list-1 pam">
+                <div class="flag--image prm">
+                    <img src="assets/icons/doctype/ai_120.png" class="ht-30" alt="ai">
+                </div>
+                <div class="flag--body">
+                    <span class="db text-color-1 f4">{{s1listflagobjectsforthtitle}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsforthmetaone}}</span>
+                    <span class="db text-color-2 f6">{{s1listflagobjectsforthmetatwo}}</span>
+                </div>
+            </li>
+        </ul>
+    </template>
+    <script>
 
-  <template>
 
-<ul class="fw-normal bg-2 man pan">
-  <li class="flag flag--top active--list-1 pam border-bottom border--3">
-    <div class="flag--image prm">
-      <img src="assets/icons/doctype/excel_120.png" class="ht-30" alt="excel">
-    </div>
-    <div class="flag--body">
-      <span class="db text-color-1 f4">{{s1listflagobjectsfirsttitle || 'Exported Reports'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsfirstmetaone || 'Oct 19, 2013 &#x2022; 457KB &#x2022; xlsx'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsfirstmetatwo || ''}}</span>
-    </div>
-  </li>
-  <li class="flag flag--top active--list-1 pam border-bottom border--3">
-    <div class="flag--image prm">
-      <img src="assets/icons/doctype/html_120.png" class="ht-30" alt="html">
-    </div>
-    <div class="flag--body">
-      <span class="db text-color-1 f4">{{s1listflagobjectssecondtitle || 'Code plugins to review'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectssecondmetaone || 'Oct 12, 2013 &#x2022; 123KB &#x2022; js'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectssecondmetatwo || ''}}</span>
-    </div>
-  </li>
-  <li class="flag flag--top active--list-1 pam border-bottom border--3">
-    <div class="flag--image prm">
-      <img src="assets/icons/doctype/psd_120.png" class="ht-30" alt="psd">
-    </div>
-    <div class="flag--body">
-      <span class="db text-color-1 f4">{{s1listflagobjectsthirdtitle || 'Login screen concepts'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsthirdmetaone || 'Oct 31, 2013 &#x2022; 1.3MB &#x2022; psd'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsthirdmetatwo || ''}}</span>
-    </div>
-  </li>
-  <li class="flag flag--top active--list-1 pam">
-    <div class="flag--image prm">
-      <img src="assets/icons/doctype/ai_120.png" class="ht-30" alt="ai">
-    </div>
-    <div class="flag--body">
-      <span class="db text-color-1 f4">{{s1listflagobjectsforthtitle || 'Logo concepts (approved)'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsforthmetaone || 'Oct 11, 2013 &#x2022; 235KB &#x2022; ai'}}</span>
-      <span class="db text-color-2 f6">{{s1listflagobjectsforthmetatwo || ''}}</span>
-    </div>
-  </li>
-</ul>
+        Polymer({
+            is: "s1-list-flag-objects",
+            properties: {
+                s1listflagobjectsfirsttitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsfirstmetaone: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsfirstmetatwo: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectssecondtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectssecondmetaone: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectssecondmetatwo: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsthirdtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsthirdmetaone: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsthirdmetatwo: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsforthtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsforthmetaone: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                s1listflagobjectsforthmetatwo: {
+                    type: String,
+                    reflectToAttribute: true
+                }
 
-  </template>
+            }
+        });
 
-</polymer-element>
+    </script>
+</dom-module>

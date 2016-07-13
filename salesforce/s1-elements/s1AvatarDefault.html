@@ -1,9 +1,19 @@
-<polymer-element name="s1-avatar-default" attributes="avatarimage" noscript>
+<dom-module id="s1-avatar-default">
+    <template>
+        <img src="{{avatarimage}}" width="45" height="45" alt="gt" class="brm">
+    </template>
+    <script>
 
-  <template>
 
-<img src="%7b%7bavatarimage%20__%20%27https_/s3.amazonaws.com/uifaces/faces/twitter/gt/128.html" width="45" height="45" alt="gt" class="brm">
+        Polymer({
+            is: "s1-avatar-default",
+            properties: {
+                avatarimage: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

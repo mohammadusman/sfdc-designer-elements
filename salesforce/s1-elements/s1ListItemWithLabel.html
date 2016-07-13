@@ -1,12 +1,26 @@
-<polymer-element name="s1-list-item-with-label" attributes="listitemlabeltitle,listitemlabelmeta" noscript>
+<dom-module id="s1-list-item-with-label" >
+    <template>
+        <li class="list-plain active--list-1 pam border-bottom border--3">
+            <span class="db text-color-1 f4">{{listitemlabeltitle}}</span>
+            <span class="db text-color-2 f6">{{listitemlabelmeta}}</span>
+        </li>
+    </template>
+    <script>
 
-  <template>
 
-    <li class="list-plain active--list-1 pam border-bottom border--3">
-        <span class="db text-color-1 f4">{{listitemlabeltitle || 'List Item'}}</span>
-        <span class="db text-color-2 f6">{{listitemlabelmeta || 'Label'}}</span>
-    </li>
+        Polymer({
+            is: "s1-list-item-with-label",
+            properties: {
+                listitemlabeltitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                listitemlabelmeta: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,26 +1,29 @@
-<polymer-element name="s1-comment-publisher-default" attributes="" noscript>
+<dom-module id="s1-comment-publisher-default" >
+    <template>
+        <footer class="border-top border--3 bg-generic-1 ht-44 " role="group">
+            <a href="javascript:void(0)" title="close" class="btn--secondary brm border bg-secondary-btn border--2 fl mts mls ht-30 phs">
+                <span class="text-color-4 f4 icon-utility-adduser lh-30"></span>
+            </a>
+            <a href="javascript:void(0)" title="close" class="btn--primary brm border bg-primary-btn border--1 fr mts mrs ht-30 phs">
+                <span class="wht fw-semibold f5 lh-30">Send</span>
+            </a>
+            <div class="pos-rel size-fill phs pvs">
+                <label class="label--icon-r-sm icon-utility-attach f6">
+                    <span class="dn">URL</span>
+                </label>
+                <input type="text"
+                       name="default"
+                       placeholder="Write a comment..."
+                       class="size-full phs ht-30 input input--white input--ph-1 input--focus-1">
+            </div>
+        </footer>
+    </template>
+    <script>
 
-  <template>
 
-<footer class="border-top border--3 bg-generic-1 ht-44 " role="group">
-  <a href="javascript:void(0)" title="close" class="btn--secondary brm border bg-secondary-btn border--2 fl mts mls ht-30 phs">
-    <span class="text-color-4 f4 icon-utility-adduser lh-30"></span>
-  </a>
-  <a href="javascript:void(0)" title="close" class="btn--primary brm border bg-primary-btn border--1 fr mts mrs ht-30 phs">
-    <span class="wht fw-semibold f5 lh-30">Send</span>
-  </a>
-  <div class="pos-rel size-fill phs pvs">
-    <label class="label--icon-r-sm icon-utility-attach f6">
-      <span class="dn">URL</span>
-    </label>
-    <input
-      type="text"
-      name="default"
-      placeholder="Write a comment..."
-      class="size-full phs ht-30 input input--white input--ph-1 input--focus-1">
-  </div>
-</footer>
+        Polymer({
+            is: "s1-comment-publisher-default"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

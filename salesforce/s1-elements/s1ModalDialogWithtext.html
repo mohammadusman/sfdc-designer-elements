@@ -1,23 +1,27 @@
-<polymer-element name="s1-modal-dialog-withtext" attributes="" noscript>
+<dom-module id="s1-modal-dialog-withtext">
+    <template>
+        <a href="javascript:void(0)" name="close" title="close" class="db tr size-full pbm">
+            <span class="db icon-utility-close f2 wht"></span>
+        </a>
+        <div class="bg-1 brm pam pos-rel tc">
+            <p class="mtn text-color-1 f4">
+                <strong>Strong text!</strong>
+                Detail text and lots of unicorns and rainbows.
+            </p>
+            <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 mbm">
+                <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
+            </button>
+            <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2">
+                <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
+            </button>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<a href="javascript:void(0)" name="close" title="close" class="db tr size-full pbm">
-  <span class="db icon-utility-close f2 wht"></span>
-</a>
-<div class="bg-1 brm pam pos-rel tc">
-  <p class="mtn text-color-1 f4">
-    <strong>Strong text!</strong>
-    Detail text and lots of unicorns and rainbows.
-  </p>
-  <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 mbm">
-    <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
-  </button>
-  <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2">
-    <span class="text-color-4 f3 fw-semibold">Secondary Button</span>
-  </button>
-</div>
+        Polymer({
+            is: "s1-modal-dialog-withtext"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,22 +1,44 @@
-<polymer-element name="s1-anchor-light-default" attributes="anchorlightlabel,anchorlighttitle,anchorlighticon,anchorlightbuttonlabel" noscript>
+<dom-module id="s1-anchor-light-default">
+    <template>
+        <header class="bg-1 border-bottom border--3">
+            <div class="icon icon--{{anchorlighticon}} brs bgs-100 a-mid mhm sq-30"></div>
+            <h1 class="dib thin a-mid">
+                <span class="db f6 lower">
+                    {{anchorlightlabel}}
+                </span>
+                <span class="db f3 text-color-1">
+                    {{anchorlighttitle}}
+                </span>
+            </h1>
+            <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
+                {{anchorlightbuttonlabel}}
+            </button>
+        </header>
+    </template>
+    <script>
 
-  <template>
 
-<header class="bg-1 border-bottom border--3">
-  <div class="icon icon--{{anchorlighticon}} brs bgs-100 a-mid mhm sq-30"></div>
-  <h1 class="dib thin a-mid">
-    <span class="db f6 lower">
-      {{anchorlightlabel || 'recent'}}
-    </span>
-    <span class="db f3 text-color-1">
-      {{anchorlighttitle || 'Opportunities'}}
-    </span>
-  </h1>
-  <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
-      {{anchorlightbuttonlabel || 'New'}}
-  </button>
-</header>
+        Polymer({
+            is: "s1-anchor-light-default",
+            properties: {
+                anchorlighticon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlighttitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightbuttonlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

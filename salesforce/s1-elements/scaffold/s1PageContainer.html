@@ -1,5 +1,5 @@
-<polymer-element name="s1-page-container" attributes="navigateon, navigationtarget">
-    <template>
+<dom-module name="s1-page-container" attributes="navigateon, navigationtarget">
+    <template is="dom-bind">
         <style>
             :host {
                 position: absolute;
@@ -8,7 +8,7 @@
                 overflow-x: hidden;
                 overflow-y: scroll;
                 -webkit-overflow-scrolling: touch;
-            };
+            }
         </style>
         <content select="*"></content>
     </template>
@@ -22,4 +22,4 @@
             }
         })
     </script>
-</polymer-element>
+</dom-module>

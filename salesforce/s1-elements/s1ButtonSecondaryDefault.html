@@ -1,11 +1,21 @@
-<polymer-element name="s1-button-secondary-default" attributes="buttonsecondarylabel" noscript>
+<dom-module id="s1-button-secondary-default">
+    <template>
+        <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold">
+            {{buttonsecondarylabel}}
+        </button>
+    </template>
+    <script>
 
-  <template>
 
-<button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold">
-  {{buttonsecondarylabel || 'Secondary Button'}}
-</button>
+        Polymer({
+            is: "s1-button-secondary-default",
+            properties: {
+                buttonsecondarylabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,12 +1,30 @@
-<polymer-element name="s1-text-input-with-label" attributes="textinputwithlabellabel,textinputwithlabelplaceholder,textinputwithlabelvalue" noscript>
+<dom-module id="s1-text-input-with-label" >
+    <template is="dom-bind">
+        <label>
+            <span class="db mbs f5 text-color-2">{{textinputwithlabellabel}}</span>
+            <input type="text" name="default" value="{{textinputwithlabelvalue}}" placeholder="{{textInputWithLabelPlaceholder}}" class="mbm size-full phm pvm input input--default input--ph-1 input--focus-1">
+        </label>
+    </template>
+    <script>
 
-  <template>
 
-<label>
-  <span class="db mbs f5 text-color-2">{{textinputwithlabellabel || 'Label'}}</span>
-  <input type="text" name="default" value="{{textinputwithlabelvalue || ''}}" placeholder="{{textInputWithLabelPlaceholder}}" class="mbm size-full phm pvm input input--default input--ph-1 input--focus-1">
-</label>
+        Polymer({
+            is: "s1-text-input-with-label",
+            properties: {
+                textinputwithlabellabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                textinputwithlabelvalue: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                textInputWithLabelPlaceholder: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

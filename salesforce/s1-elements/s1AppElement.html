@@ -1,0 +1,71 @@
+﻿<link rel="import" href="../../salesforce/mobile-ui-elements/elements/force-sobject-collection/force-sobject-collection.html">
+<link rel="import" href="../../salesforce/s1-elements/scaffold/s1AppScaffold.html">
+<link rel="import" href="../../salesforce/s1-elements/scaffold/s1PageContainer.html">
+<link rel="import" href="../../salesforce/s1-elements/s1AnchorLightLabelonBottom.html">
+<link rel="import" href="../../salesforce/s1-elements/s1ListWithLabels.html">
+<link rel="import" href="../../salesforce/s1-elements/s1StagedNavigationStageLeft.html">
+<link rel="import" href="../../salesforce/s1-elements/s1StagedNavigationNotifications.html">
+<dom-module id="my-element">
+    <style>
+        :host {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        #app {
+            width: 100%;
+            height: 100%;
+            left: 0px;
+            top: 0px;
+            position: absolute;
+        }
+
+        #s1_staged_navigation_stage_left {
+            width: 320px;
+        }
+
+        #s1_staged_navigation_notifications {
+            width: 320px;
+        }
+
+        #s1_anchor_light_labelon_bottom {
+            width: 320px;
+        }
+
+        #s1_list_with_labels {
+            width: 320px;
+        }
+
+        #force_collection {
+            left: 760px;
+            top: 250px;
+            position: absolute;
+        }
+    </style>
+    <template>
+        <force-sobject-collection sobject="{{ $.s1_staged_navigation_stage_left.selectedSObject }}" id="force_collection"></force-sobject-collection>
+        <s1-app-scaffold navcloseevent="sobject-selected" id="app">
+            <s1-page-container navigateon="core-activate" id="list" class="animate" active="">
+                <s1-anchor-light-labelon-bottom anchorlightbottomlabel="recent home" anchorlightbottomtitle="{{ $.force_collection.sobject }}" anchorlightbottomicon="{{ $.force_collection.sobject }}" id="s1_anchor_light_labelon_bottom"></s1-anchor-light-labelon-bottom>
+                <s1-list-with-labels collection="{{ $.force_collection.collection }}" id="s1_list_with_labels"></s1-list-with-labels>
+            </s1-page-container>
+            <s1-page-container id="detail" class="animate">
+            </s1-page-container>
+            <s1-staged-navigation-stage-left id="s1_staged_navigation_stage_left" navigation=""></s1-staged-navigation-stage-left>
+            <s1-staged-navigation-notifications id="s1_staged_navigation_notifications" notifications=""></s1-staged-navigation-notifications>
+        </s1-app-scaffold>
+    </template>
+    <script>
+    Polymer({
+      is: 'my-element',
+      properties: {
+        selectedSObject: {
+          type: String,
+          value: ''
+        }
+      }
+    });
+    </script>
+</dom-module>

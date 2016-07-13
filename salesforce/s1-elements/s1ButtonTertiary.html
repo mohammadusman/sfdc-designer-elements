@@ -1,12 +1,16 @@
-<polymer-element name="s1-button-tertiary" attributes="" noscript>
+<dom-module id="s1-button-tertiary">
+    <template>
+        <a href="javascript:void(0)" title="Like" name="like" class="f5 fl">
+            <span class="dib mrs icon-utility-like f4"></span>
+            Liked
+        </a>
+    </template>
+    <script>
 
-  <template>
 
-<a href="javascript:void(0)" title="Like" name="like" class="f5 fl">
-  <span class="dib mrs icon-utility-like f4"></span>
-  Liked
-</a>
+        Polymer({
+            is: "s1-button-tertiary"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,11 +1,21 @@
-<polymer-element name="s1-button-primary-default" attributes="buttonprimarylabel" noscript>
+<dom-module id="s1-button-primary-default" >
+    <template>
+        <button class="btn bg-primary-btn btn--primary pvs size-full brm border border--1 wht f3 fw-semibold">
+            {{buttonprimarylabel}}
+        </button>
+    </template>
+    <script>
 
-  <template>
 
-<button class="btn bg-primary-btn btn--primary pvs size-full brm border border--1 wht f3 fw-semibold">
-  {{buttonprimarylabel || 'Primary Button'}}
-</button>
+        Polymer({
+            is: "s1-button-primary-default",
+            properties: {
+                buttonprimarylabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

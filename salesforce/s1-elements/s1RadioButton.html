@@ -1,24 +1,26 @@
-<polymer-element name="s1-radio-button" attributes="" noscript>
+<dom-module id="s1-radio-button" >
+    <template>
+        <form>
+            <div class="mbm db">
+                <input class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid dib" type="radio" name="filter" value="filter-1" id="filter-1" />
+                <label class="f4 text-color-1" for="filter-1">Filter 1</label>
+            </div>
+            <div class="mbm db">
+                <input class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid clear dib" type="radio" name="filter" value="filter-2" id="filter-2" />
+                <label class="f4 text-color-1" for="filter-2">Filter 2</label>
+            </div>
+            <div class="mbm db">
+                <input disabled class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid clear dib" type="radio" name="filter" value="filter-3" id="filter-3" />
+                <label class="f4 text-color-1" for="filter-3">Filter 3 (Disabled)</label>
+            </div>
+        </form>
+    </template>
+    <script>
 
-  <template>
 
-<form>
-  <div class="mbm db">
-    <input class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid dib" type="radio" name="filter" value="filter-1" id="filter-1" />
-    <label class="f4 text-color-1" for="filter-1">Filter 1</label>
-  </div>
+        Polymer({
+            is: "s1-radio-button"
+        });
 
-  <div class="mbm db">
-    <input class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid clear dib" type="radio" name="filter" value="filter-2" id="filter-2" />
-    <label class="f4 text-color-1" for="filter-2">Filter 2</label>
-  </div>
-
-  <div class="mbm db">
-    <input disabled class="radio radio--default radio--states-1 brc mrs bg-secondary-btn sq-22 a-mid clear dib" type="radio" name="filter" value="filter-3" id="filter-3" />
-    <label class="f4 text-color-1" for="filter-3">Filter 3 (Disabled)</label>
-  </div>
-</form>
-
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

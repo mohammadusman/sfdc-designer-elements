@@ -1,130 +1,126 @@
-<link rel="import" href="../../components/core-selector/core-selector.html">
-
-<polymer-element name="s1-staged-navigation-stage-left" attributes="">
-
-  <template>
-
-<nav role="navigation" class="bg-4">
-  <section>
-    <ul class="pan man f3 text-color-5">
-      <li class="tc border-bottom border--6 pam">
-        <a href="javascript:void(0)" class="size-full pvs input input--stageleft text-color-3"><span class="icon-utility-search mrs f6"></span>Search Salesforce</a>
-      </li>
-      <li class="flag">
-        <a href="javascript:void(0)" class="flag--image pam active--list-2" title="Feed">
-          <img src="assets/icons/standard_bg/feed_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Feed</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <h1 class="man f6 text-color-3 caps pvs plm size-full bg-5">Recent</h1>
-    <ul id="sobjects" class="pan man f3 text-color-5">
-      <li name="contact" class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Contacts">
-          <img src="assets/icons/standard_bg/contact_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Contacts</span>
-        </a>
-      </li>
-      <li name="opportunity" class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Opportunities">
-          <img src="assets/icons/standard_bg/opportunity_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Opportunities</span>
-        </a>
-      </li>
-      <li name="account" class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Accounts">
-          <img src="assets/icons/standard_bg/account_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Accounts</span>
-        </a>
-      </li>
-      <li name="case" class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Cases">
-          <img src="assets/icons/standard_bg/case_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Cases</span>
-        </a>
-      </li>
-      <li name="lead" class="flag">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Leads">
-          <img src="assets/icons/standard_bg/lead_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Leads</span>
-        </a>
-      </li>
-    </ul>
-    <core-selector id="sobject_selector" target="{{$.sobjects}}" on-core-activate="{{fireSelectionEvent}}"></core-selector>
-  </section>
-  <section>
-    <h1 class="man f6 text-color-3 caps pvs plm size-full bg-5">Apps</h1>
-    <ul class="pan man f3 text-color-5">
-      <li class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Today">
-          <img src="assets/icons/standard_bg/today_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Today</span>
-        </a>
-      </li>
-      <li class="flag border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Tasks">
-          <img src="assets/icons/standard_bg/task_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Tasks</span>
-        </a>
-      </li>
-      <li class="flag">
-        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Notes">
-          <img src="assets/icons/standard_bg/note_120.png" class="sq-30 fl mrm" alt="">
-          <span class="f3 text-color-5 db lh-30">Notes</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-  <section>
-    <hr class="man ht-30 size-full bg-5">
-    <ul class="pan man f3 text-color-5">
-      <li class="flag active--list-2 border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam" title="Logout">
-                        <div class="flag--image">
-                            <img src="assets/icons/standard_bg/avatar_120.png" class="sq-30 fl mrm" alt="">
-                        </div>
-                        <div class="flag--body">
-                            <span class="f3 text-color-5">rspohn@salesforce.com</span><br>
-                            <span class="f4 text-color-3">na1.salesforce.com</span>
-                        </div>
-        </a>
-      </li>
-      <li class="flag active--list-2 border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam" title="Settings">
-          <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-settings"></span>
-          <span class="f3 text-color-5 lh-30">Settings</span>
-        </a>
-      </li>
-      <li class="flag active--list-2 border-bottom border--6">
-        <a href="javascript:void(0)" class="size-full pam" title="Help">
-          <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-help"></span>
-          <span class="f3 text-color-5 lh-30">Help</span>
-        </a>
-      </li>
-      <li class="flag active--list-2">
-        <a href="javascript:void(0)" class="size-full pam" title="Logout">
-          <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-logout"></span>
-          <span class="f3 text-color-5 lh-30">Logout</span>
-        </a>
-      </li>
-    </ul>
-  </section>
-</nav>
-  </template>
-  <script>
-    Polymer("s1-staged-navigation-stage-left", {
-      ready: function() {
-        //this.$.sobject_selector.target = this.$.
-      },
-      get selectedSObject() {
-        return this.$.sobject_selector.selected || 'account';
-      },
-      fireSelectionEvent: function() {
-        this.fire('sobject-selected');
-      }
-    })
-  </script>
-
-</polymer-element>
+<link rel="import" href="core-selector/core-selector.html">
+<dom-module id="s1-staged-navigation-stage-left" >
+    <template>
+        <nav role="navigation" class="bg-4">
+            <section>
+                <ul class="pan man f3 text-color-5">
+                    <li class="tc border-bottom border--6 pam">
+                        <a href="javascript:void(0)" class="size-full pvs input input--stageleft text-color-3"><span class="icon-utility-search mrs f6"></span>Search Salesforce</a>
+                    </li>
+                    <li class="flag">
+                        <a href="javascript:void(0)" class="flag--image pam active--list-2" title="Feed">
+                            <img src="assets/icons/standard_bg/feed_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Feed</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h1 class="man f6 text-color-3 caps pvs plm size-full bg-5">Recent</h1>
+                <ul id="sobjects" class="pan man f3 text-color-5">
+                    <li name="contact" class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Contacts">
+                            <img src="assets/icons/standard_bg/contact_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Contacts</span>
+                        </a>
+                    </li>
+                    <li name="opportunity" class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Opportunities">
+                            <img src="assets/icons/standard_bg/opportunity_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Opportunities</span>
+                        </a>
+                    </li>
+                    <li name="account" class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Accounts">
+                            <img src="assets/icons/standard_bg/account_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Accounts</span>
+                        </a>
+                    </li>
+                    <li name="case" class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Cases">
+                            <img src="assets/icons/standard_bg/case_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Cases</span>
+                        </a>
+                    </li>
+                    <li name="lead" class="flag">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Leads">
+                            <img src="assets/icons/standard_bg/lead_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Leads</span>
+                        </a>
+                    </li>
+                </ul>
+                <core-selector id="sobject_selector" target="{{$.sobjects}}" on-core-activate="{{fireSelectionEvent}}"></core-selector>
+            </section>
+            <section>
+                <h1 class="man f6 text-color-3 caps pvs plm size-full bg-5">Apps</h1>
+                <ul class="pan man f3 text-color-5">
+                    <li class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Today">
+                            <img src="assets/icons/standard_bg/today_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Today</span>
+                        </a>
+                    </li>
+                    <li class="flag border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Tasks">
+                            <img src="assets/icons/standard_bg/task_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Tasks</span>
+                        </a>
+                    </li>
+                    <li class="flag">
+                        <a href="javascript:void(0)" class="size-full pam active--list-2" title="Notes">
+                            <img src="assets/icons/standard_bg/note_120.png" class="sq-30 fl mrm" alt="">
+                            <span class="f3 text-color-5 db lh-30">Notes</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <hr class="man ht-30 size-full bg-5">
+                <ul class="pan man f3 text-color-5">
+                    <li class="flag active--list-2 border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam" title="Logout">
+                            <div class="flag--image">
+                                <img src="assets/icons/standard_bg/avatar_120.png" class="sq-30 fl mrm" alt="">
+                            </div>
+                            <div class="flag--body">
+                                <span class="f3 text-color-5">rspohn@salesforce.com</span><br>
+                                <span class="f4 text-color-3">na1.salesforce.com</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="flag active--list-2 border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam" title="Settings">
+                            <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-settings"></span>
+                            <span class="f3 text-color-5 lh-30">Settings</span>
+                        </a>
+                    </li>
+                    <li class="flag active--list-2 border-bottom border--6">
+                        <a href="javascript:void(0)" class="size-full pam" title="Help">
+                            <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-help"></span>
+                            <span class="f3 text-color-5 lh-30">Help</span>
+                        </a>
+                    </li>
+                    <li class="flag active--list-2">
+                        <a href="javascript:void(0)" class="size-full pam" title="Logout">
+                            <span class="a-mid sq-30 pls mrm f2 text-color-8 icon-utility-logout"></span>
+                            <span class="f3 text-color-5 lh-30">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </template>
+    <script>
+        Polymer("s1-staged-navigation-stage-left", {
+            ready: function () {
+                //this.$.sobject_selector.target = this.$.
+            },
+            get selectedSObject() {
+                return this.$.sobject_selector.selected || 'account';
+            },
+            fireSelectionEvent: function () {
+                this.fire('sobject-selected');
+            }
+        })
+    </script>
+</dom-module>

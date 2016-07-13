@@ -1,46 +1,50 @@
-<polymer-element name="s1-feed-comment-with-payload" attributes="" noscript>
+<dom-module id="s1-feed-comment-with-payload" >
+    <template>
+        <article class="pam">
+            <div class="flag">
+                <div class="flag--image prm">
+                    <img src="../../../s3.amazonaws.com/uifaces/faces/twitter/gt/128.jpg" width="30" height="30" alt="gt" class="brm">
+                </div>
+                <div class="flag--body">
+                    <a href="javascript:void(0)" name="actor" title="Geoff Teehan" class="fw-semibold f3 db">
+                        Geoff Teehan
+                    </a>
+                    <time class="db f6 text-color-2" datetime="2013-11-13">
+                        29 minutes ago
+                    </time>
+                </div>
+            </div>
+            <p class="mvm f4 text-color-1">
+                Feedback from everyone else is welcome also!
+                Please let me know what you think.
+                I am desperate for your approval and appreciation.
+                Shower me with love and affection. Fishing for compliments here.
+            </p>
+            <article class="brm border border--4 bg-3 pam">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="assets/icons/doctype/excel_120.png" class="ht-30" alt="excel">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1 db">photo.pdf</span>
+                        <span class="db f5 text-color-2">1.2 MB</span>
+                    </div>
+                </div>
+            </article>
+            <footer class="clear pvm border-bottom border--3">
+                <a href="javascript:void(0)" name="like" title="Unlike" class="f5 fl">
+                    Unlike
+                </a>
+                <span class="f5 fr">3 likes</span>
+            </footer>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="pam">
-  <div class="flag">
-    <div class="flag--image prm">
-      <img src="../../../s3.amazonaws.com/uifaces/faces/twitter/gt/128.jpg" width="30" height="30" alt="gt" class="brm">
-    </div>
-    <div class="flag--body">
-      <a href="javascript:void(0)" name="actor" title="Geoff Teehan" class="fw-semibold f3 db">
-        Geoff Teehan
-      </a>
-      <time class="db f6 text-color-2" datetime="2013-11-13">
-        29 minutes ago
-      </time>
-    </div>
-  </div>
-  <p class="mvm f4 text-color-1">
-    Feedback from everyone else is welcome also!
-    Please let me know what you think.
-    I am desperate for your approval and appreciation.
-    Shower me with love and affection. Fishing for compliments here.
-  </p>
-  <article class="brm border border--4 bg-3 pam">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="assets/icons/doctype/excel_120.png" class="ht-30" alt="excel">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1 db">photo.pdf</span>
-        <span class="db f5 text-color-2">1.2 MB</span>
-      </div>
-    </div>
-  </article>
-  <footer class="clear pvm border-bottom border--3">
-    <a href="javascript:void(0)" name="like" title="Unlike" class="f5 fl">
-      Unlike
-    </a>
-    <span class="f5 fr">3 likes</span>
-  </footer>
-</article>
+        Polymer({
+            is: "s1-feed-comment-with-payload"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

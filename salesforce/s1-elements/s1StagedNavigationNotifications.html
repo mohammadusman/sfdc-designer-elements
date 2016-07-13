@@ -1,96 +1,100 @@
-<polymer-element name="s1-staged-navigation-notifications" attributes="" noscript>
+<dom-module id="s1-staged-navigation-notifications">
+    <template>
+        <section class="bg-5">
+            <header class="tc pvm border-bottom border--7">
+                <h1 class="man fw-semibold f2 text-color-5">Notifications</h1>
+            </header>
+            <ul class="pan man bg-4">
+                <li class="flag pam active--list-2 border-bottom border--6">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/JimSmith.png" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            Janice Walters commented on your post.
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            15 minutes ago
+                        </p>
+                    </div>
+                </li>
+                <li class="flag pam active--list-2 border-bottom border--6">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/leslie.png" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            Kirsten Smith commented on your post.
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            29 minutes ago
+                        </p>
+                    </div>
+                </li>
+                <li class="flag pam active--list-2 border-bottom border--7">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/jamesBakersfield.jpg" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            James Potter commented on a post on your wall.
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            54 minutes ago
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="pan man">
+                <li class="flag flag--top pam border-bottom border--7">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/peterPortlandia.jpg" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            "Hey Bill - wanted to ask you about EBR connections. Know anyone that
+                            can help me out for a couple days..."
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            2 hours ago
+                        </p>
+                    </div>
+                </li>
+                <li class="flag pam active--list-2 border-bottom border--7">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/KristenKane.png" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            Patty Charles commented on your post.
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            3 hours ago
+                        </p>
+                    </div>
+                </li>
+                <li class="flag pam active--list-2 border-bottom border--7">
+                    <div class="flag--image prm">
+                        <img src="assets/avatars/leslie.png" width="44px" class="brm" alt="feed">
+                    </div>
+                    <div class="flag--body">
+                        <p class="f4 text-color-5 man">
+                            Lorelei Chan commented on your post.
+                        </p>
+                        <p class="f6 text-color-3 man">
+                            Yesterday
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </template>
+    <script>
 
-  <template>
 
-<section class="bg-5">
-  <header class="tc pvm border-bottom border--7">
-    <h1 class="man fw-semibold f2 text-color-5">Notifications</h1>
-  </header>
-  <ul class="pan man bg-4">
-    <li class="flag pam active--list-2 border-bottom border--6">
-      <div class="flag--image prm">
-        <img src="assets/avatars/JimSmith.png" width="44px" class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          Janice Walters commented on your post.
-        </p>
-        <p class="f6 text-color-3 man">
-          15 minutes ago
-        </p>
-      </div>
-    </li>
-    <li class="flag pam active--list-2 border-bottom border--6">
-      <div class="flag--image prm">
-        <img src="assets/avatars/leslie.png" width="44px" class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          Kirsten Smith commented on your post.
-        </p>
-        <p class="f6 text-color-3 man">
-          29 minutes ago
-        </p>
-      </div>
-    </li>
-    <li class="flag pam active--list-2 border-bottom border--7">
-      <div class="flag--image prm">
-        <img src="assets/avatars/jamesBakersfield.jpg" width="44px"  class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          James Potter commented on a post on your wall.
-        </p>
-        <p class="f6 text-color-3 man">
-          54 minutes ago
-        </p>
-      </div>
-    </li>
-  </ul>
-  <ul class="pan man">
-    <li class="flag flag--top pam border-bottom border--7">
-      <div class="flag--image prm">
-        <img src="assets/avatars/peterPortlandia.jpg" width="44px" class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          "Hey Bill - wanted to ask you about EBR connections. Know anyone that
-          can help me out for a couple days..."
-        </p>
-        <p class="f6 text-color-3 man">
-          2 hours ago
-        </p>
-      </div>
-    </li>
-    <li class="flag pam active--list-2 border-bottom border--7">
-      <div class="flag--image prm">
-        <img src="assets/avatars/KristenKane.png" width="44px" class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          Patty Charles commented on your post.
-        </p>
-        <p class="f6 text-color-3 man">
-          3 hours ago
-        </p>
-      </div>
-    </li>
-    <li class="flag pam active--list-2 border-bottom border--7">
-      <div class="flag--image prm">
-        <img src="assets/avatars/leslie.png" width="44px" class="brm" alt="feed">
-      </div>
-      <div class="flag--body">
-        <p class="f4 text-color-5 man">
-          Lorelei Chan commented on your post.
-        </p>
-        <p class="f6 text-color-3 man">
-          Yesterday
-        </p>
-      </div>
-    </li>
-  </ul>
-</section>
+        Polymer({
+            is: "s1-staged-navigation-notifications"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

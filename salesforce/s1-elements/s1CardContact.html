@@ -1,25 +1,51 @@
-<polymer-element name="s1-card-contact" attributes="contactcardicon,contactcardtitle,contactcarddetail1,contactcarddetail2,contactcarddetail3" noscript>
+<dom-module id="s1-card-contact">
+    <template>
+        <article class="mam bg-1 border border--3 pam brm">
+            <div class="mbs flag flag--rev">
+                <div class="flag--body">
+                    <h1 class="man f3 text-color-1 fw-semibold">
+                        {{contactcardtitle}}
+                    </h1>
+                </div>
+                <div class="flag--image prm">
+                    <div class="icon icon--{{contactcardicon}} brs bgs-100 a-mid sq-30"></div>
+                </div>
+            </div>
+            <ul class="list-plain man pan">
+                <li class="f5 text-color-2">{{contactcarddetail1}}</li>
+                <li class="f5 text-color-2">{{contactcarddetail2}}</li>
+                <li class="f5 text-color-2">{{contactcarddetail3}}</li>
+            </ul>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="mam bg-1 border border--3 pam brm">
-  <div class="mbs flag flag--rev">
-    <div class="flag--body">
-      <h1 class="man f3 text-color-1 fw-semibold">
-        {{contactcardtitle || 'Jonathan Perilla-Jones'}}
-      </h1>
-    </div>
-    <div class="flag--image prm">
-                <div class="icon icon--{{contactcardicon || 'contact'}} brs bgs-100 a-mid sq-30"></div>
-    </div>
-  </div>
-  <ul class="list-plain man pan">
-    <li class="f5 text-color-2">{{contactcarddetail1 || 'Director of Consumer Sales'}}</li>
-    <li class="f5 text-color-2">{{contactcarddetail2 || 'United Partners'}}</li>
-    <li class="f5 text-color-2">{{contactcarddetail3 || '(415) 432-5456'}}</li>
-  </ul>
-</article>
+        Polymer({
+            is: "s1-card-contact",
+            properties: {
+                contactcardtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                contactcardicon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                contactcarddetail1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                contactcarddetail2: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                contactcarddetail3: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

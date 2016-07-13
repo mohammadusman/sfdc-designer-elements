@@ -1,12 +1,22 @@
-<polymer-element name="s1-textarea-default" attributes="textareadefaultplaceholder" noscript>
+<dom-module id="s1-textarea-default" >
+    <template>
+        <label>
+            <span class="tha">Default</span>
+            <textarea name="default" placeholder="{{textareadefaultplaceholder}}" class="size-full phm pvm textarea textarea--default textarea--ph-1 textarea--focus-1"></textarea>
+        </label>
+    </template>
+    <script>
 
-  <template>
 
-<label>
-  <span class="tha">Default</span>
-  <textarea name="default" placeholder="{{textareadefaultplaceholder || 'Default textarea'}}" class="size-full phm pvm textarea textarea--default textarea--ph-1 textarea--focus-1"></textarea>
-</label>
+        Polymer({
+            is: "s1-textarea-default",
+            properties: {
+                textareadefaultplaceholder: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

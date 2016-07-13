@@ -1,12 +1,26 @@
-<polymer-element name="s1-text-input-default" attributes="textinputplaceholder,textinputvalue" noscript>
+<dom-module id="s1-text-input-default">
+    <template>
+        <label>
+            <span class="dn">Default</span>
+            <input type="text" name="default" value="{{textinputvalue}}" placeholder="{{textinputplaceholder}}" class="mbm size-full phm pvm input input--default input--ph-1 input--focus-1">
+        </label>
+    </template>
+    <script>
 
-  <template>
 
-<label>
-  <span class="dn">Default</span>
-  <input type="text" name="default" value="{{textinputvalue || ''}}" placeholder="{{textinputplaceholder || 'Default'}}" class="mbm size-full phm pvm input input--default input--ph-1 input--focus-1">
-</label>
+        Polymer({
+            is: "s1-text-input-default",
+            properties: {
+                textinputvalue: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                textinputplaceholder: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

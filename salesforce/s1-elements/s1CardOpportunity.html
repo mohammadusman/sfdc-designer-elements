@@ -1,18 +1,44 @@
-<polymer-element name="s1-card-opportunity" attributes="opptycardtitle,opptycarddetail1,opptycarddetail2,opptycarddetail3,opptycarddetail4" noscript>
+<dom-module id="s1-card-opportunity" >
+    <template>
+        <article class="mam bg-1 border border--3 pam brm">
+            <h1 class="man f3 text-color-1 fw-semibold">
+                {{opptycardtitle}}
+            </h1>
+            <ul class="clear list-plain man pan">
+                <li class="mbs f5 text-color-2">{{opptycarddetail1}} &#8226; {{opptycarddetail2}}</li>
+                <li class="fl f3 text-color-1">${{opptycarddetail3}}</li>
+                <li class="fr f3 text-color-1">{{opptycarddetail4}}</li>
+            </ul>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="mam bg-1 border border--3 pam brm">
-        <h1 class="man f3 text-color-1 fw-semibold">
-            {{opptycardtitle || 'Mobile Platform Licenses (450)'}}
-        </h1>
-  <ul class="clear list-plain man pan">
-    <li class="mbs f5 text-color-2">{{opptycarddetail1 || 'Negotiation/Review'}} &#8226; {{opptycarddetail2 || 'United Partners'}}</li>
-    <li class="fl f3 text-color-1">${{opptycarddetail3 || '11,875'}}</li>
-    <li class="fr f3 text-color-1">{{opptycarddetail4 || '7/25/13'}}</li>
-  </ul>
-</article>
+        Polymer({
+            is: "s1-card-opportunity",
+            properties: {
+                opptycardtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                opptycarddetail1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                opptycarddetail2: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                opptycarddetail3: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                opptycarddetail4: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

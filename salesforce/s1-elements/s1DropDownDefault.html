@@ -1,28 +1,58 @@
-<polymer-element name="s1-drop-down-default" attributes="dropdowndefaultitem1,dropdowndefaultitem2,dropdowndefaultitem3,dropdowndefaultitem4,dropdowndefaultitem5,dropdowndefaultitem6" noscript>
+<dom-module id="s1-drop-down-default" >
+    <template>
+        <ul class="list-plain man pan brm bg-1 border border--3 ds-2">
+            <li class="brtopm active--list-3 pam border-bottom border--8">
+                <span class="f4 text-color-1">{{dropdowndefaultitem1}}</span>
+            </li>
+            <li class="active--list-3 pam border-bottom border--8">
+                <span class="f4 text-color-1">{{dropdowndefaultitem2}}</span>
+            </li>
+            <li class="active--list-3 pam border-bottom border--8">
+                <span class="f4 text-color-1">{{dropdowndefaultitem3}}</span>
+            </li>
+            <li class="active--list-3 pam border-bottom border--8">
+                <span class="f4 text-color-1">{{dropdowndefaultitem4}}</span>
+            </li>
+            <li class="active--list-3 pam border-bottom border--8">
+                <span class="f4 text-color-1">{{dropdowndefaultitem5}}</span>
+            </li>
+            <li class="brbotm active--list-3 pam">
+                <span class="f4 text-color-1">{{dropdowndefaultitem6}}</span>
+            </li>
+        </ul>
+    </template>
+    <script>
 
-  <template>
 
-<ul class="list-plain man pan brm bg-1 border border--3 ds-2">
-  <li class="brtopm active--list-3 pam border-bottom border--8">
-    <span class="f4 text-color-1">{{dropdowndefaultitem1 || 'James Kenney'}}</span>
-  </li>
-  <li class="active--list-3 pam border-bottom border--8">
-    <span class="f4 text-color-1">{{dropdowndefaultitem2 || 'Khaya Cohen'}}</span>
-  </li>
-  <li class="active--list-3 pam border-bottom border--8">
-    <span class="f4 text-color-1">{{dropdowndefaultitem3 || 'Scott Hoying'}}</span>
-  </li>
-  <li class="active--list-3 pam border-bottom border--8">
-    <span class="f4 text-color-1">{{dropdowndefaultitem4 || 'Mitchell Grassi'}}</span>
-  </li>
-  <li class="active--list-3 pam border-bottom border--8">
-    <span class="f4 text-color-1">{{dropdowndefaultitem5 || 'Avi Kaplan'}}</span>
-  </li>
-  <li class="brbotm active--list-3 pam">
-    <span class="f4 text-color-1">{{dropdowndefaultitem6 || 'Kevin Olusula'}}</span>
-  </li>
-</ul>
+        Polymer({
+            is: "s1-drop-down-default",
+            properties: {
+                dropdowndefaultitem1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdowndefaultitem2: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdowndefaultitem3: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdowndefaultitem4: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdowndefaultitem5: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdowndefaultitem6: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

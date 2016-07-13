@@ -1,38 +1,48 @@
-<polymer-element name="s1-header-primary-default" attributes="headerprimarynotifications,headerprimarylefticon">
+<dom-module id="s1-header-primary-default">
+    <template>
+        <header class="bg-global-header ht-44" role="group">
+            <ul class="fl man pan list-horizontal ht-44">
+                <li class="pos-rel fl ht-44">
+                    <a href="javascript:void(0)" title="Navigation" class="phm ht-44 pam" on-tap="{{navigationTap}}">
+                        <span class="icon-utility-{{headerprimarylefticon}} active--icon-1 text-color-5 "></span>
+                        <span class="tha">Navigation</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="fr man pan list-horizontal ht-44">
+                <li class="pos-rel fl ht-44">
+                    <a href="javascript:void(0)" title="Notifications" class="phm ht-44 pam" on-tap="{{notificationTap}}">
+                        <span class="icon-utility-notification active--icon-1 text-color-5 notifications"
+                              data-notification-count="{{headerprimarynotifications}}">
+                        </span>
+                        <span class="tha"> Notifications</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+    </template>
+    <script>
+        Polymer({
+            is: "s1-header-primary-default",
+            properties: {
+                headerprimarylefticon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                headerprimarynotifications: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                notificationTap: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                navigationTap: {
+                    type: String,
+                    reflectToAttribute: true
+                }
 
-  <template>
-
-<header class="bg-global-header ht-44" role="group">
-  <ul class="fl man pan list-horizontal ht-44">
-    <li class="pos-rel fl ht-44">
-      <a href="javascript:void(0)" title="Navigation" class="phm ht-44 pam" on-tap="{{navigationTap}}">
-        <span class="icon-utility-{{headerprimarylefticon || 'rows'}} active--icon-1 text-color-5 "></span>
-        <span class="tha">Navigation</span>
-      </a>
-    </li>
-  </ul>
-  <ul class="fr man pan list-horizontal ht-44">
-    <li class="pos-rel fl ht-44">
-      <a href="javascript:void(0)" title="Notifications" class="phm ht-44 pam" on-tap="{{notificationTap}}">
-        <span class="icon-utility-notification active--icon-1 text-color-5 notifications"
-          data-notification-count="{{headerprimarynotifications || '4'}}">
-        </span>
-        <span class="tha"> Notifications</span>
-      </a>
-    </li>
-  </ul>
-</header>
-
-  </template>
-  <script>
-    Polymer("s1-header-primary-default", {
-      navigationTap: function() {
-        this.fire('navigation');
-      },
-      notificationTap: function() {
-        this.fire('notifications');
-      }
-    });
-  </script>
-
-</polymer-element>
+            }
+        });
+    </script>
+</dom-module>

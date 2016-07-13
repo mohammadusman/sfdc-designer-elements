@@ -1,22 +1,44 @@
-<polymer-element name="s1-anchor-light-labelon-bottom" attributes="anchorlightbottomlabel,anchorlightbottomtitle,anchorlightbottomicon,anchorlightbuttonbottomlabel" noscript>
+<dom-module id="s1-anchor-light-labelon-bottom" >
+    <template>
+        <header class="bg-1 border-bottom border--3">
+            <div class="icon icon--{{anchorlightbottomicon}} brs bgs-100 a-mid mhm sq-30"></div>
+            <h1 class="dib thin a-mid">
+                <span class="db f3 text-color-1">
+                    {{anchorlightbottomtitle}}
+                </span>
+                <span class="db f6 lower">
+                    {{anchorlightbottomlabel}}
+                </span>
+            </h1>
+            <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
+                {{anchorlightbuttonbottomlabel}}
+            </button>
+        </header>
+    </template>
+    <script>
 
-  <template>
 
-<header class="bg-1 border-bottom border--3">
-  <div class="icon icon--{{anchorlightbottomicon || 'account'}} brs bgs-100 a-mid mhm sq-30"></div>
-  <h1 class="dib thin a-mid">
-    <span class="db f3 text-color-1">
-      {{anchorlightbottomtitle || 'Accounts'}}
-    </span>
-    <span class="db f6 lower">
-      {{anchorlightbottomlabel || '14 results'}}
-    </span>
-  </h1>
-  <button class="btn btn--secondary bg-secondary-btn brm pvs phm border border--2 fr mrm mvm text-color-4 f4 fw-semibold">
-      {{anchorlightbuttonbottomlabel || 'New'}}
-  </button>
-</header>
+        Polymer({
+            is: "s1-anchor-light-labelon-bottom",
+            properties: {
+                anchorlightbottomicon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightbottomtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightbottomlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightbuttonbottomlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

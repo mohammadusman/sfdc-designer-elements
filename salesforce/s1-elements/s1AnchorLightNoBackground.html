@@ -1,19 +1,37 @@
-<polymer-element name="s1-anchor-light-no-background" attributes="anchorlightnobglabel,anchorlightnobgtitle,anchorlightnobgicon" noscript>
+<dom-module id="s1-anchor-light-no-background" >
+    <template>
+        <header class="bg-2">
+            <div class="icon icon--{{anchorlightnobgicon}} brs bgs-100 a-mid mhm sq-30"></div>
+            <h1 class="dib thin a-mid">
+                <span class="db f3 text-color-1">
+                    {{anchorlightnobgtitle}}
+                </span>
+                <span class="db f6 lower">
+                    {{anchorlightnobglabel}}
+                </span>
+            </h1>
+        </header>
+    </template>
+    <script>
 
-  <template>
 
-<header class="bg-2">
-  <div class="icon icon--{{anchorlightnobgicon || 'lead'}} brs bgs-100 a-mid mhm sq-30"></div>
-  <h1 class="dib thin a-mid">
-    <span class="db f3 text-color-1">
-      {{anchorlightnobgtitle || 'Leads'}}
-    </span>
-    <span class="db f6 lower">
-      {{anchorlightnobglabel || '10 results'}}
-    </span>
-  </h1>
-</header>
+        Polymer({
+            is: "s1-anchor-light-no-background",
+            properties: {
+                anchorlightnobgicon: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightnobgtitle: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                anchorlightnobglabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

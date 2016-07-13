@@ -1,23 +1,27 @@
-<polymer-element name="s1-feed-payload-compound" attributes="" noscript>
+<dom-module id="s1-feed-payload-compound">
+    <template>
+        <article class="nbfc brm border border--4">
+            <div class="flag pam bg-3 border-bottom border--8">
+                <div class="flag--image prm">
+                    <img src="assets/icons/standard_bg/opportunity_120.png" class="sq-30" alt="thanks">
+                </div>
+                <div class="flag--body">
+                    <span class="f4 text-color-1 db">United Partners - 3k*</span>
+                </div>
+            </div>
+            <div class="tc pam bg-1">
+                <a href="javascript:void(0)" name="more" title="Show more details" class="dib f5">
+                    Show more details
+                </a>
+            </div>
+        </article>
+    </template>
+    <script>
 
-  <template>
 
-<article class="nbfc brm border border--4">
-  <div class="flag pam bg-3 border-bottom border--8">
-    <div class="flag--image prm">
-      <img src="assets/icons/standard_bg/opportunity_120.png" class="sq-30" alt="thanks">
-    </div>
-    <div class="flag--body">
-      <span class="f4 text-color-1 db">United Partners - 3k*</span>
-    </div>
-  </div>
-  <div class="tc pam bg-1">
-    <a href="javascript:void(0)" name="more" title="Show more details" class="dib f5">
-      Show more details
-    </a>
-  </div>
-</article>
+        Polymer({
+            is: "s1-feed-payload-compound"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

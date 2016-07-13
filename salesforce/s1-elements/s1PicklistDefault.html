@@ -1,17 +1,31 @@
-<polymer-element name="s1-picklist-default" attributes="picklistdefaultvalue,picklistdefaultlabel" noscript>
+<dom-module id="s1-picklist-default" >
+    <template>
+        <div class="mbm pos-rel">
+            <span class="label--icon-r icon-utility-right size-full"></span>
+            <a href="javascript:void(0)"
+               name="picklist"
+               title="Picklist Value"
+               class="size-full plm prx pvm bg-secondary-btn input input--picklist">
+                <label class="dib mrs f5 text-color-2">{{picklistdefaultlabel}}</label><span class="text-color-1 dib">{{picklistdefaultvalue}}</span>
+            </a>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<div class="mbm pos-rel">
-  <span class="label--icon-r icon-utility-right size-full"></span>
-  <a href="javascript:void(0)"
-     name="picklist"
-     title="Picklist Value"
-     class="size-full plm prx pvm bg-secondary-btn input input--picklist">
-    <label class="dib mrs f5 text-color-2">{{picklistdefaultlabel || 'Label'}}</label><span class="text-color-1 dib">{{picklistdefaultvalue || 'Picklist Value'}}</span>
-  </a>
-</div>
+        Polymer({
+            is: "s1-picklist-default",
+            properties: {
+                picklistdefaultlabel: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                picklistdefaultvalue: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

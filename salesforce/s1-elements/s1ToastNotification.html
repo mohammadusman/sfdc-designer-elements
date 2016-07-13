@@ -1,19 +1,23 @@
-<polymer-element name="s1-toast-notification" attributes="" noscript>
+<dom-module id="s1-toast-notification" >
+    <template>
+        <div class="flag pam border-bottom border--3 bg-2-95p">
+            <div class="flag--image prm">
+                <span class="f1 icon-utility-warning text-warning"></span>
+            </div>
+            <div class="flag--body">
+                <p class="man f4 text-color-1">
+                    <strong>Oh noez!</strong>
+                    Something may or may not have gone wrong.
+                </p>
+            </div>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<div class="flag pam border-bottom border--3 bg-2-95p">
-  <div class="flag--image prm">
-    <span class="f1 icon-utility-warning text-warning"></span>
-  </div>
-  <div class="flag--body">
-    <p class="man f4 text-color-1">
-      <strong>Oh noez!</strong>
-      Something may or may not have gone wrong.
-    </p>
-  </div>
-</div>
+        Polymer({
+            is: "s1-toast-notification"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

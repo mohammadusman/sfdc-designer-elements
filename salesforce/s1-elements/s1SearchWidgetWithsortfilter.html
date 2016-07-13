@@ -1,19 +1,29 @@
-<polymer-element name="s1-search-widget-withsortfilter" attributes="searchwidgetsortfilterplaceholder" noscript>
+<dom-module id="s1-search-widget-withsortfilter" >
+    <template>
+        <header class="bg-generic-1 ht-44 border-bottom border--3 lh-44" role="group">
+            <a href="javascript:void(0)" title="info" class="fr mhm">
+                <span class="active-dim icon-utility-filter f2 a-mid text-color-4"></span>
+            </a>
+            <div class="pos-rel size-fill pls pvs">
+                <label class="icon-utility-search pos-abs label--search">
+                    <span class="tha">URL</span>
+                </label>
+                <input type="text" name="default" placeholder="{{searchwidgetsortfilterplaceholder}}" class="size-full plx prs ht-30 input input--white input--ph-1 input--focus-1">
+            </div>
+        </header>
+    </template>
+    <script>
 
-  <template>
 
-<header class="bg-generic-1 ht-44 border-bottom border--3 lh-44" role="group">
-  <a href="javascript:void(0)" title="info" class="fr mhm">
-    <span class="active-dim icon-utility-filter f2 a-mid text-color-4"></span>
-  </a>
-  <div class="pos-rel size-fill pls pvs">
-    <label class="icon-utility-search pos-abs label--search">
-      <span class="tha">URL</span>
-    </label>
-    <input type="text" name="default" placeholder="{{searchwidgetsortfilterplaceholder || 'Search the feed'}}" class="size-full plx prs ht-30 input input--white input--ph-1 input--focus-1">
-  </div>
-</header>
+        Polymer({
+            is: "s1-search-widget-withsortfilter",
+            properties: {
+                searchwidgetsortfilterplaceholder: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

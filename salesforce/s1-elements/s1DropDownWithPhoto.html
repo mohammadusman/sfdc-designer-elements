@@ -1,70 +1,101 @@
-<polymer-element name="s1-drop-down-with-photo" attributes="dropdownwithphotoitem1,dropdownwithphotoitem2,dropdownwithphotoitem3,dropdownwithphotoitem4,dropdownwithphotoitem5,dropdownwithphotoitem6,dropdownwithphotoimage1,dropdownwithphotoimage2,dropdownwithphotoimage3,dropdownwithphotoimage4,dropdownwithphotoimage5,dropdownwithphotoimage6" noscript>
+<dom-module id="s1-drop-down-with-photo" >
+    <template>
+        <ul class="man pan brm bg-1 border border--3 ds-2">
+            <li class="brtopm db active--list-3 pam border-bottom border--8">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage1%20__%20%27http_/pixelholdr.com/portrait%2cbusiness%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem1}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="db active--list-3 pam border-bottom border--8">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage2%20__%20%27http_/pixelholdr.com/headshot%2cbusiness%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem2}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="db active--list-3 pam border-bottom border--8">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage3%20__%20%27http_/pixelholdr.com/picture%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem3}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="db active--list-3 pam border-bottom border--8">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage4%20__%20%27http_/pixelholdr.com/headshot%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem4}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="db active--list-3 pam border-bottom border--8">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage5%20__%20%27http_/pixelholdr.com/picture%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem5}}</span>
+                    </div>
+                </div>
+            </li>
+            <li class="brbotm db active--list-3 pam">
+                <div class="flag">
+                    <div class="flag--image prm">
+                        <img src="%7b%7bdropdownwithphotoimage6%20__%20%27http_/pixelholdr.com/business%2cpicture%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
+                    </div>
+                    <div class="flag--body">
+                        <span class="f4 text-color-1">{{dropdownwithphotoitem6}}</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </template>
+    <script>
 
-  <template>
 
-<ul class="man pan brm bg-1 border border--3 ds-2">
-  <li class="brtopm db active--list-3 pam border-bottom border--8">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage1%20__%20%27http_/pixelholdr.com/portrait%2cbusiness%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem1 || 'James Kenney'}}</span>
-      </div>
-    </div>
-  </li>
-  <li class="db active--list-3 pam border-bottom border--8">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage2%20__%20%27http_/pixelholdr.com/headshot%2cbusiness%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem2 || 'Khaya Cohen'}}</span>
-      </div>
-    </div>
-  </li>
-  <li class="db active--list-3 pam border-bottom border--8">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage3%20__%20%27http_/pixelholdr.com/picture%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem3 || 'Scott Hoying'}}</span>
-      </div>
-    </div>
-  </li>
-  <li class="db active--list-3 pam border-bottom border--8">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage4%20__%20%27http_/pixelholdr.com/headshot%2cman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem4 || 'Mitchell Grassi'}}</span>
-      </div>
-    </div>
-  </li>
-  <li class="db active--list-3 pam border-bottom border--8">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage5%20__%20%27http_/pixelholdr.com/picture%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem5 || 'Avi Kaplan'}}</span>
-      </div>
-    </div>
-  </li>
-  <li class="brbotm db active--list-3 pam">
-    <div class="flag">
-      <div class="flag--image prm">
-        <img src="%7b%7bdropdownwithphotoimage6%20__%20%27http_/pixelholdr.com/business%2cpicture%2cwoman/30x30/dimensions_hide%27%7d%7d.html" class="brm" alt="kitten">
-      </div>
-      <div class="flag--body">
-        <span class="f4 text-color-1">{{dropdownwithphotoitem6 || 'Kevin Olusula'}}</span>
-      </div>
-    </div>
-  </li>
-</ul>
+        Polymer({
+            is: "s1-drop-down-with-photo",
+            properties: {
+                dropdownwithphotoitem1: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdownwithphotoitem2: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdownwithphotoitem3: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdownwithphotoitem4: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdownwithphotoitem5: {
+                    type: String,
+                    reflectToAttribute: true
+                },
+                dropdownwithphotoitem6: {
+                    type: String,
+                    reflectToAttribute: true
+                }
 
-  </template>
+            }
+        });
 
-</polymer-element>
+    </script>
+</dom-module>

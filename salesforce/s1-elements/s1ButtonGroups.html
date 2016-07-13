@@ -1,18 +1,28 @@
-<polymer-element name="s1-button-groups" attributes="buttongrouplabel" noscript>
-
-  <template>
-
-    <div class="phm">
-        <button class="btn bg-secondary-btn btn--secondary pvs phx fr mlm brm border border--2">
-            <span class="text-color-4 icon-utility-down f3 fw-semibold"></span>
-        </button>
-        <div class="size-fill">
-            <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold">
-            {{buttongrouplabel || 'New'}}
+<dom-module id="s1-button-groups" >
+    <template>
+        <div class="phm">
+            <button class="btn bg-secondary-btn btn--secondary pvs phx fr mlm brm border border--2">
+                <span class="text-color-4 icon-utility-down f3 fw-semibold"></span>
             </button>
+            <div class="size-fill">
+                <button class="btn bg-secondary-btn btn--secondary pvs size-full brm border border--2 text-color-4 f3 fw-semibold">
+                    {{buttongrouplabel}}
+                </button>
+            </div>
         </div>
-    </div>
+    </template>
+    <script>
 
-  </template>
 
-</polymer-element>
+        Polymer({
+            is: "s1-button-groups",
+            properties: {
+                buttongrouplabel: {
+                    type: String,
+                    reflectToAttribute: true
+                }
+            }
+        });
+
+    </script>
+</dom-module>

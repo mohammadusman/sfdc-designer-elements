@@ -1,14 +1,18 @@
-<polymer-element name="s1-text-input-with-fixed-text" attributes="" noscript>
+<dom-module id="s1-text-input-with-fixed-text" >
+    <template>
+        <div class="mbm pos-rel">
+            <label class="pos-abs size-full label--fixedtext" data-fixedtext="%">
+                <span class="dn">Percentage</span>
+            </label>
+            <input type="text" name="default" placeholder="Percentage" class="size-full prx plm pvm input input--default input--ph-1 input--focus-1">
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<div class="mbm pos-rel">
-  <label class="pos-abs size-full label--fixedtext" data-fixedtext="%">
-    <span class="dn">Percentage</span>
-  </label>
-  <input type="text" name="default" placeholder="Percentage" class="size-full prx plm pvm input input--default input--ph-1 input--focus-1">
-</div>
+        Polymer({
+            is: "s1-text-input-with-fixed-text"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

@@ -1,24 +1,28 @@
-<polymer-element name="s1-header-secondary-child-browser" attributes="" noscript>
+<dom-module id="s1-header-secondary-child-browser" >
+    <template>
+        <header class="bg-secondary-header ht-44 " role="group">
+            <a href="javascript:void(0)"
+               title="close"
+               class="btn--header-secondary brm bg-secondary-header-btn fr mts mrs ht-30 phm ">
+                <span class="text-color-5 f6 lh-30">Close</span>
+            </a>
+            <div class="pos-rel size-fill phs pvs">
+                <label>
+                    <span class="dn">URL</span>
+                </label>
+                <input type="text"
+                       name="default"
+                       value="http://www.salesforce.com/"
+                       class="size-full phs ht-30 input input--header-secondary input--ph-1 input--focus-1">
+            </div>
+        </header>
+    </template>
+    <script>
 
-  <template>
 
-<header class="bg-secondary-header ht-44 " role="group">
-  <a href="javascript:void(0)"
-     title="close"
-     class="btn--header-secondary brm bg-secondary-header-btn fr mts mrs ht-30 phm ">
-    <span class="text-color-5 f6 lh-30">Close</span>
-  </a>
-  <div class="pos-rel size-fill phs pvs">
-    <label>
-      <span class="dn">URL</span>
-    </label>
-    <input type="text"
-           name="default"
-           value="http://www.salesforce.com/"
-           class="size-full phs ht-30 input input--header-secondary input--ph-1 input--focus-1">
-  </div>
-</header>
+        Polymer({
+            is: "s1-header-secondary-child-browser"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

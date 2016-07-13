@@ -1,12 +1,16 @@
-<polymer-element name="s1-progress-spinner-modal" attributes="" noscript>
+<dom-module id="s1-progress-spinner-modal" >
+    <template>
+        <div class="tc brm bg-6-80p text-color-5 sq-100">
+            <img src="assets/loading-white.gif" alt="loading" class="sq-35 mtl mbs dib">
+            <span class="db f4">Loading</span>
+        </div>
+    </template>
+    <script>
 
-  <template>
 
-<div class="tc brm bg-6-80p text-color-5 sq-100">
-  <img src="assets/loading-white.gif" alt="loading" class="sq-35 mtl mbs dib">
-  <span class="db f4">Loading</span>
-</div>
+        Polymer({
+            is: "s1-progress-spinner-modal"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>

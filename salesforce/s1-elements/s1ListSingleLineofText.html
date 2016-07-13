@@ -1,14 +1,18 @@
-<polymer-element name="s1-list-single-lineof-text" attributes="" noscript>
+<dom-module id="s1-list-single-lineof-text">
+    <template>
+        <ul class="list-plain fw-normal bg-2 man pan">
+            <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 1</li>
+            <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 2</li>
+            <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 3</li>
+            <li class="active--list-1 pam text-color-1 f4">List Item 4</li>
+        </ul>
+    </template>
+    <script>
 
-  <template>
 
-<ul class="list-plain fw-normal bg-2 man pan">
-  <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 1</li>
-  <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 2</li>
-  <li class="active--list-1 pam text-color-1 f4 border-bottom border--3">List Item 3</li>
-  <li class="active--list-1 pam text-color-1 f4">List Item 4</li>
-</ul>
+        Polymer({
+            is: "s1-list-single-lineof-text"
+        });
 
-  </template>
-
-</polymer-element>
+    </script>
+</dom-module>
